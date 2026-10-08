@@ -1,0 +1,3347 @@
+[
+  {
+    "title": "Prairie Gate Roofing Pros",
+    "placeId": "mock_001",
+    "address": "1058 Laurel Crest Way , Dallas, TX 75235",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0129",
+    "website": "https://prairie-gate-roofing-pros.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Prairie%20Gate%20Roofing%20Pros",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.3,
+    "reviewsCount": 286,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/prairie-gate-roofing-pros"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-16T14:13:00.000Z"
+      },
+      {
+        "text": "Crew showed up on time and finished in one day. Roof looks great.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-02T09:24:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-13T11:59:00.000Z"
+      },
+      {
+        "text": "Roof looks good, though the gutters needed a touch-up after.",
+        "stars": 4,
+        "publishedAtDate": "2026-05-10T13:44:00.000Z"
+      },
+      {
+        "text": "Helped us with the adjuster visit and got the claim approved.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-26T15:42:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Prairie Gate Roofing Pros | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Prairie Gate Roofing Pros</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550129\">Call us</a><a href=\"https://instagram.com/prairie-gate-roofing-pros\">Instagram</a><footer>&copy; 2023 Prairie Gate Roofing Pros</footer></body></html>",
+      "pagespeedMobile": 33,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want an inspection after a storm have to call or leave the site to book, and some will go to a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile site",
+            "detail": "The homepage scores 33/100 on PageSpeed mobile, so people searching on their phones after roof damage may leave before the page loads.",
+            "severity": "medium"
+          },
+          {
+            "label": "Copyright dated 2023",
+            "detail": "The footer copyright reads 2023, which makes the site look out of date to visitors comparing roofers.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "adjuster help",
+          "storm damage found",
+          "on-time crew",
+          "honest recommendations",
+          "gutter touch-up"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your site scores 33 out of 100 on mobile, and homeowners can't book an inspection online.",
+        "pitch": "We help roofing companies like yours add mobile-friendly pages with online booking and build review volume, so more storm calls turn into booked jobs. Would you be open to a short call next week to see if it fits?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Halcyon Ridge Roofing",
+    "placeId": "mock_002",
+    "address": "4451 Dovetail Ave , Dallas, TX 75243",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0104",
+    "website": "https://halcyon-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Halcyon%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4,
+    "reviewsCount": 249,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/halcyon-ridge-roofing"
+    ],
+    "instagrams": [
+      "https://instagram.com/halcyon-ridge-roofing"
+    ],
+    "emails": [
+      "office@halcyon-ridge-roofing.example"
+    ],
+    "reviews": [
+      {
+        "text": "Helped us with the adjuster visit and got the claim approved.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-03T16:04:00.000Z"
+      },
+      {
+        "text": "Cleaned up every nail in the yard. Impressed.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-28T10:25:00.000Z"
+      },
+      {
+        "text": "Showed up late both days but did quality work.",
+        "stars": 3,
+        "publishedAtDate": "2025-11-19T10:37:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2026-07-02T16:05:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Halcyon Ridge Roofing | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Halcyon Ridge Roofing</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><script src=\"https://cdn.getjobber.com/jobber.com/booking.js\"></script><a href=\"https://facebook.com/halcyon-ridge-roofing\">Facebook</a><a href=\"https://instagram.com/halcyon-ridge-roofing\">Instagram</a><footer>&copy; 2023 Halcyon Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 66,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile page",
+            "detail": "Homepage scores 66/100 on mobile PageSpeed, so visitors on phones may wait long enough to leave before requesting a roof estimate.",
+            "severity": "medium"
+          },
+          {
+            "label": "No click-to-call",
+            "detail": "The site has no click-to-call button, so a homeowner ready to call after a storm has to copy the number manually.",
+            "severity": "high"
+          },
+          {
+            "label": "Stale copyright year",
+            "detail": "The footer copyright reads 2023, which suggests the site has not been refreshed recently and can look dated next to competitors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Thorough cleanup work",
+          "Honest repair recommendations",
+          "Insurance claim help",
+          "Late arrivals"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your 4-star rating on 249 reviews is strong, but your site has no click-to-call button for people ready to phone you.",
+        "pitch": "We help roofing companies like yours turn website visitors into booked jobs with mobile-friendly pages, click-to-call, and review growth. Would you be open to a short call next week to see whether it fits Halcyon Ridge?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Banyard Shingle Works",
+    "placeId": "mock_003",
+    "address": "8766 Marlbrook Way , Dallas, TX 75253",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0140",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Banyard%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.1,
+    "reviewsCount": 42,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Roofers were polite and kept the dog away from the work area.",
+        "stars": 4,
+        "publishedAtDate": "2026-01-17T11:08:00.000Z"
+      },
+      {
+        "text": "Quick, careful work after the hail. Would hire again.",
+        "stars": 5,
+        "publishedAtDate": "2026-03-03T10:23:00.000Z"
+      },
+      {
+        "text": "Fixed our leak and it has stayed dry through three storms.",
+        "stars": 5,
+        "publishedAtDate": "2026-02-06T14:53:00.000Z"
+      },
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2026-06-23T11:39:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Banyard Shingle Works has no website, so homeowners searching for a roofer in Dallas have nowhere to check their work, request a quote, or book a visit.",
+            "severity": "high"
+          },
+          {
+            "label": "Low 3.1 star rating",
+            "detail": "A 3.1 rating across 42 Google reviews makes it harder to win calls against higher-rated Dallas roofers who appear beside them in local search.",
+            "severity": "medium"
+          },
+          {
+            "label": "Reviews praise quality but not booking",
+            "detail": "The four sampled reviews praise careful storm and leak work, but none mention a way to book, which leaves that strength unused online.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "storm damage repair",
+          "careful quick work",
+          "leak repair",
+          "polite crew"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your crew found storm damage another roofer missed, but customers searching Google for you find no website.",
+        "pitch": "We build mobile-friendly websites with online booking and help local businesses grow their Google reviews, which could turn that good work into more booked jobs. Would you be open to a short call next week to see if it fits?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Redwater Roof & Repair",
+    "placeId": "mock_004",
+    "address": "3550 Sundial Ave , Dallas, TX 75244",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0151",
+    "website": "https://redwater-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Redwater%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.6,
+    "reviewsCount": 73,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [
+      "office@redwater-roof-repair.example"
+    ],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Redwater Roof & Repair | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Redwater Roof & Repair</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550151\">Call us</a><footer>&copy; 2026 Redwater Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 87,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking option, so customers who want a roof repair after hours have to call or leave and may book a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Middling Google rating",
+            "detail": "A 3.6 rating across 73 reviews is below what most homeowners expect from a roofer, which can push shoppers toward higher-rated options in map results.",
+            "severity": "medium"
+          },
+          {
+            "label": "No social profiles linked",
+            "detail": "The homepage links to no social accounts, which leaves a gap in trust signals and in local visibility beyond Google.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Your site handles calls well, but customers can't book a roof repair online at 10 p.m., and that's costing you jobs.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local businesses grow their Google reviews, so the gap you have now gets closed. Would you be open to a short call next week to see whether it makes sense for Redwater Roof & Repair?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Pinecrest Roofing Group",
+    "placeId": "mock_005",
+    "address": "9038 Tindall Dr , Dallas, TX 75238",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0134",
+    "website": "https://pinecrest-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Pinecrest%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.3,
+    "reviewsCount": 31,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/pinecrest-roofing-group"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Waited a week for a callback just to get an estimate.",
+        "stars": 2,
+        "publishedAtDate": "2026-03-25T09:40:00.000Z"
+      },
+      {
+        "text": "They handled the whole insurance claim for us. Zero stress.",
+        "stars": 5,
+        "publishedAtDate": "2026-02-06T18:28:00.000Z"
+      },
+      {
+        "text": "Crew showed up on time and finished in one day. Roof looks great.",
+        "stars": 5,
+        "publishedAtDate": "2026-06-23T13:35:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Pinecrest Roofing Group | Dallas, TX</title></head><body><h1>Pinecrest Roofing Group</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550134\">Call us</a><a href=\"https://instagram.com/pinecrest-roofing-group\">Instagram</a><footer>&copy; 2023 Pinecrest Roofing Group</footer></body></html>",
+      "pagespeedMobile": 40,
+      "ai": {
+        "findings": [
+          {
+            "label": "Not mobile-friendly",
+            "detail": "The homepage has no mobile viewport and scores 40/100 on PageSpeed mobile, so phone visitors struggle to read and act, which sends jobs to competitors.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Customers cannot request an estimate or book a visit online, so anyone who wants a quote after hours or dislikes calling has to go elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow callbacks in reviews",
+            "detail": "One of the three recent reviews says a customer waited a week for a callback just to get an estimate, which hurts a 3.3-star rating.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "on-time crew",
+          "fast one-day finish",
+          "insurance claim help",
+          "slow callbacks"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your site scores 40 out of 100 on mobile, and one recent reviewer waited a week for an estimate callback.",
+        "pitch": "We build mobile-friendly roofing sites with online estimate booking, so homeowners can request a quote at any hour instead of waiting on a callback. Would you be open to a short call next week to see if that fits Pinecrest?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Oakmont Shingle Works",
+    "placeId": "mock_006",
+    "address": "9273 Mulberry Bend Ln , Dallas, TX 75248",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0108",
+    "website": "https://oakmont-shingle-works.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Oakmont%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.7,
+    "reviewsCount": 191,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [
+      "office@oakmont-shingle-works.example"
+    ],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Oakmont Shingle Works | Dallas, TX</title></head><body><h1>Oakmont Shingle Works</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550108\">Call us</a><a href=\"/book\">Book online</a><footer>&copy; 2018 Oakmont Shingle Works</footer></body></html>",
+      "pagespeedMobile": 29,
+      "ai": {
+        "findings": [
+          {
+            "label": "Mobile viewport missing",
+            "detail": "The homepage has no mobile viewport tag, so phones render it at desktop width and visitors have to pinch and zoom, which pushes them to call a competitor.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile speed",
+            "detail": "PageSpeed mobile score is 29/100, so people searching on their phones wait a long time and many leave before reaching the booking form.",
+            "severity": "high"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year on the homepage reads 2018, which makes the site look neglected next to a 4.7-star business with 191 reviews.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Your 4.7-star rating is strong, but your homepage loads at desktop width on phones and scores 29 out of 100 on mobile speed.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local businesses grow their Google reviews, so the strong reputation you have earned reaches more people. Would you be open to a short call next week to see whether this would be useful for Oakmont Shingle Works?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Ironbark Roof & Repair",
+    "placeId": "mock_007",
+    "address": "5100 Brindle Ave , Dallas, TX 75202",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0127",
+    "website": "https://ironbark-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Ironbark%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.6,
+    "reviewsCount": 414,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/ironbark-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Fair price and the estimate matched the final bill.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-26T17:55:00.000Z"
+      },
+      {
+        "text": "Replaced our whole roof in two days. Neighbors asked for their number.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-26T10:17:00.000Z"
+      },
+      {
+        "text": "Paid for a repair and the same spot leaked again a month later.",
+        "stars": 2,
+        "publishedAtDate": "2025-12-26T18:06:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Ironbark Roof & Repair | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Ironbark Roof & Repair</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><script src=\"https://scheduler.servicetitan.com/embed.js\"></script><a href=\"https://facebook.com/ironbark-roof-repair\">Facebook</a><footer>&copy; 2024 Ironbark Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 64,
+      "ai": {
+        "findings": [
+          {
+            "label": "Mobile speed lagging",
+            "detail": "PageSpeed mobile score is 64/100, so phone visitors may wait longer than they will tolerate before calling or booking.",
+            "severity": "medium"
+          },
+          {
+            "label": "No click-to-call",
+            "detail": "The homepage has no click-to-call button, so mobile visitors must copy the number instead of tapping once to call.",
+            "severity": "high"
+          },
+          {
+            "label": "Repair callback complaint",
+            "detail": "1 of the 3 reviews reports a repair that failed a month later, which can make prospects hesitant to book smaller jobs.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "fast roof replacement",
+          "fair pricing",
+          "accurate estimates",
+          "repair didn't last"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Ironbark, your online booking is set up well, but your homepage has no tap-to-call button for phone visitors.",
+        "pitch": "Apex Growth Agency builds mobile sites that make calling and booking quicker, which would close the gap we found on your homepage. Would you be open to a short call next week to talk through it?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Garnet Shingle Works",
+    "placeId": "mock_008",
+    "address": "726 Pecan Hollow Ln , Dallas, TX 75228",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0172",
+    "website": "https://garnet-shingle-works.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Garnet%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.8,
+    "reviewsCount": 40,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [
+      "office@garnet-shingle-works.example"
+    ],
+    "reviews": [
+      {
+        "text": "Left shingles and nails all over the driveway.",
+        "stars": 2,
+        "publishedAtDate": "2026-04-22T20:34:00.000Z"
+      },
+      {
+        "text": "Showed up late both days but did quality work.",
+        "stars": 3,
+        "publishedAtDate": "2026-03-01T08:56:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Garnet Shingle Works | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Garnet Shingle Works</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550172\">Call us</a><footer>&copy; 2024 Garnet Shingle Works</footer></body></html>",
+      "pagespeedMobile": 56,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want a roofing or shingle quote after hours have to call and may go to a competitor that lets them book right away.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile load time",
+            "detail": "PageSpeed mobile score is 56/100, which can frustrate phone visitors and weaken search ranking against nearby roofers.",
+            "severity": "medium"
+          },
+          {
+            "label": "Reviews flag punctuality and cleanup",
+            "detail": "Two recent reviews mention arriving late and leaving debris, which can make new customers hesitate before they call.",
+            "severity": "medium"
+          },
+          {
+            "label": "No social links",
+            "detail": "No social profiles are linked from the site, which misses a chance to show completed jobs and build trust.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "late arrival",
+          "job cleanup",
+          "quality work"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Your 4.8-star rating is strong, but your site has no online booking, so some homeowners may be calling someone else.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses grow Google reviews, which could make it easier for Dallas homeowners to schedule with you. Would you be open to a short call next week to talk through what that could look like for Garnet Shingle Works?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Jasper Lane Roofing Co",
+    "placeId": "mock_009",
+    "address": "5243 Pecan Hollow Way , Dallas, TX 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0191",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Jasper%20Lane%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.3,
+    "reviewsCount": 4,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/jasper-lane-roofing-co"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "The owner walked the roof with me and explained everything.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-17T19:34:00.000Z"
+      },
+      {
+        "text": "Called three times before anyone got back to me.",
+        "stars": 2,
+        "publishedAtDate": "2026-08-24T18:47:00.000Z"
+      },
+      {
+        "text": "They handled the whole insurance claim for us. Zero stress.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-07T12:27:00.000Z"
+      },
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2025-11-22T12:39:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Jasper Lane Roofing has no website, so homeowners searching for a roofer in Dallas have nowhere to request a quote or book after finding the listing.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow callbacks in reviews",
+            "detail": "Two of the four reviews complain about slow or disorganized follow-up, including a customer who called three times before getting a reply, which pushes leads toward competitors who answer faster.",
+            "severity": "high"
+          },
+          {
+            "label": "Low star rating",
+            "detail": "A 3.3 rating from only 4 reviews makes the listing look weaker than competitors when homeowners compare options side by side.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "slow callbacks",
+          "insurance claim help",
+          "disorganized scheduling",
+          "owner walks roof",
+          "crew quality"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Jasper, a customer told you they called three times before anyone got back, and that is costing you roofing jobs.",
+        "pitch": "Apex Growth Agency builds mobile-friendly websites with online booking and helps local businesses collect more Google reviews, so customers can request a quote and get a response without waiting. Would you be open to a short call next week to see if that makes sense for Jasper Lane Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Fenwick Roofing Group",
+    "placeId": "mock_010",
+    "address": "6753 Kingsbury St , Dallas, TX 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0197",
+    "website": "https://fenwick-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Fenwick%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.6,
+    "reviewsCount": 361,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/fenwick-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [
+      "office@fenwick-roofing-group.example"
+    ],
+    "reviews": [
+      {
+        "text": "The owner walked the roof with me and explained everything.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-22T13:43:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Fenwick Roofing Group | Dallas, TX</title></head><body><h1>Fenwick Roofing Group</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550197\">Call us</a><a href=\"https://facebook.com/fenwick-roofing-group\">Facebook</a><footer>&copy; 2024 Fenwick Roofing Group</footer></body></html>",
+      "pagespeedMobile": 87,
+      "ai": {
+        "findings": [
+          {
+            "label": "Not mobile-friendly",
+            "detail": "The homepage has no mobile viewport tag, so phone visitors may see a desktop-sized layout, which pushes away people ready to call a roofer.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Visitors cannot book an inspection or estimate online, so anyone who prefers booking after hours may call a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Rating trails competitors",
+            "detail": "A 3.6 rating across 361 reviews is below what most homeowners expect, which can cost trust before the first call.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "owner walks roof",
+          "clear explanations"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Mr. Fenwick, your site has no mobile viewport setting, so phone visitors may struggle to book a roof inspection.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses grow their Google reviews, which is the gap I noticed on your homepage. Would you be open to a short call next week to see if it makes sense for Fenwick Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Mesquite Hill Ridge Roofing",
+    "placeId": "mock_011",
+    "address": "5185 Brindle Ave , Dallas, TX 75210",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0193",
+    "website": "https://mesquite-hill-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Mesquite%20Hill%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.7,
+    "reviewsCount": 340,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/mesquite-hill-ridge-roofing"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "They said they would help with insurance, then went quiet.",
+        "stars": 2,
+        "publishedAtDate": "2026-05-26T19:47:00.000Z"
+      },
+      {
+        "text": "Great warranty and they actually honored it when a vent leaked.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-22T08:18:00.000Z"
+      },
+      {
+        "text": "Showed up late both days but did quality work.",
+        "stars": 3,
+        "publishedAtDate": "2026-06-22T17:39:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Mesquite Hill Ridge Roofing | Dallas, TX</title></head><body><h1>Mesquite Hill Ridge Roofing</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"https://facebook.com/mesquite-hill-ridge-roofing\">Facebook</a><footer>&copy; 2017 Mesquite Hill Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 61,
+      "ai": {
+        "findings": [
+          {
+            "label": "Site not mobile-ready",
+            "detail": "The homepage fails the mobile viewport check and scores 61/100 on PageSpeed mobile, so phone visitors searching for a roof repair are likely to bounce before calling.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "There is no online booking and no click-to-call on the site, so a homeowner ready to book on a phone has to hunt for a number or leave.",
+            "severity": "high"
+          },
+          {
+            "label": "Reviews cite reliability gaps",
+            "detail": "Two of the three recent reviews mention a late arrival or a team going quiet after a promise, which hurts trust with new customers reading reviews.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated website footer",
+            "detail": "The site's copyright year is 2017, which signals an outdated site to visitors comparing roofers.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "quality work",
+          "late arrival",
+          "insurance follow-up",
+          "warranty honored"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Mesquite Hill Ridge's site scores 61 on mobile and has no way to book online, so phone visitors may be calling someone else.",
+        "pitch": "That gap is exactly where Apex Growth Agency helps local roofers, with mobile-friendly sites that take online bookings and review growth that builds trust. Would you be open to a short call next week to see if it's a fit?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Cinder Ridge Roofing",
+    "placeId": "mock_012",
+    "address": "8199 Dovetail Ave , Dallas, TX 75210",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0183",
+    "website": "https://cinder-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Cinder%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": null,
+    "reviewsCount": 0,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/cinder-ridge-roofing"
+    ],
+    "instagrams": [
+      "https://instagram.com/cinder-ridge-roofing"
+    ],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Cinder Ridge Roofing | Dallas, TX</title></head><body><h1>Cinder Ridge Roofing</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"https://facebook.com/cinder-ridge-roofing\">Facebook</a><a href=\"https://instagram.com/cinder-ridge-roofing\">Instagram</a><footer>&copy; 2025 Cinder Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 31,
+      "ai": {
+        "findings": [
+          {
+            "label": "Not mobile-friendly",
+            "detail": "The homepage has no mobile viewport tag and scores 31/100 on PageSpeed mobile, so phone visitors likely struggle to read and act on the site.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Customers cannot request or book a roof inspection online, so anyone who wants to schedule after hours may call a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "No click-to-call",
+            "detail": "The site has no tap-to-call button, which adds friction for homeowners searching on their phones after a storm or leak.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Mark, your site scores 31 out of 100 on mobile speed, so many phone visitors may leave before they call.",
+        "pitch": "Apex Growth Agency builds mobile-friendly roofing websites with online booking and click-to-call, so homeowners can reach you in a tap. Would you be open to a short call next week to see whether that fits Cinder Ridge Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Cobalt Roofing Group",
+    "placeId": "mock_013",
+    "address": "9855 Sundial Blvd , Dallas, TX 75240",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0163",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Cobalt%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.7,
+    "reviewsCount": 399,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/cobalt-roofing-group"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Professional from the first call to the final inspection.",
+        "stars": 5,
+        "publishedAtDate": "2026-05-02T15:15:00.000Z"
+      },
+      {
+        "text": "Replaced our whole roof in two days. Neighbors asked for their number.",
+        "stars": 5,
+        "publishedAtDate": "2025-11-15T09:51:00.000Z"
+      },
+      {
+        "text": "Great experience. Texted updates every morning before the crew arrived.",
+        "stars": 5,
+        "publishedAtDate": "2026-05-22T15:35:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Cobalt Roofing has no website, so customers searching for a roofer in Dallas who check the web before calling have nothing to book or verify, which likely sends jobs to competitors.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "With no site, there is no way for a homeowner to request an estimate or schedule an inspection outside of a phone call, which costs jobs from people who prefer to book after hours.",
+            "severity": "medium"
+          },
+          {
+            "label": "Strong reviews not used online",
+            "detail": "The business has a 4.7 rating across 399 reviews, but without a website those reviews have no place to build trust for people comparing roofers.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Crew communication",
+          "Professional service",
+          "Fast roof replacement",
+          "Neighbor referrals"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your 4.7 rating from 399 reviews is strong, but a homeowner searching for a Dallas roofer can't find a website or book online yet.",
+        "pitch": "We build mobile-friendly websites with online booking and help local businesses grow their Google reviews, so the trust you've earned shows up when people search. Would you be open to a short call next week to see if this makes sense for Cobalt Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Wrenfield Roofing Co",
+    "placeId": "mock_014",
+    "address": "4643 Hickory Bluff Blvd , Dallas, TX 75241",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0150",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Wrenfield%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.9,
+    "reviewsCount": 285,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Quoted a range and landed at the top of it.",
+        "stars": 3,
+        "publishedAtDate": "2026-05-09T19:15:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Wrenfield has no website on its Google listing, so customers who search and compare roofers have nothing to check, book from, or trust before calling.",
+            "severity": "high"
+          },
+          {
+            "label": "Reviews mention pricing surprise",
+            "detail": "One of the recent reviews says the final quote landed at the top of the quoted range, which can make price-shopping customers hesitant to call back.",
+            "severity": "medium"
+          },
+          {
+            "label": "Booking status unknown",
+            "detail": "We could not check whether online booking exists because there is no website to review, so this stays an open question rather than a confirmed gap.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "pricing surprise",
+          "quote range"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Wrenfield has 285 Google reviews at 3.9 stars, but with no website, a customer comparing roofers has nowhere to check you out.",
+        "pitch": "We build mobile-friendly websites with online booking and help local businesses grow their Google reviews, so customers can find and book you without a phone call first. Would you be open to a short call next week to see if that fits Wrenfield?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Zinnia Roof & Repair",
+    "placeId": "mock_015",
+    "address": "7733 Mulberry Bend St , Dallas, TX 75214",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0182",
+    "website": "https://zinnia-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Zinnia%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.6,
+    "reviewsCount": 125,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/zinnia-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-05T10:24:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-05T18:13:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Zinnia Roof & Repair | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Zinnia Roof & Repair</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550182\">Call us</a><a href=\"https://facebook.com/zinnia-roof-repair\">Facebook</a><footer>&copy; 2026 Zinnia Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 44,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want a roof inspection at night or on weekends have to call and may book elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile page",
+            "detail": "PageSpeed mobile score is 44/100, which can push the site down in local search and lose visitors who are on their phones after a storm.",
+            "severity": "medium"
+          },
+          {
+            "label": "Rating below 4 stars",
+            "detail": "The Google rating is 3.6 across 125 reviews, which makes it harder to win price-shopping customers against higher-rated roofers nearby.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "honest recommendations",
+          "storm damage found",
+          "fair repair advice"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your 3.6 rating across 125 reviews is solid work, but your site makes homeowners call before they can book.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps grow Google reviews, so the work you already do is easier to find and book. Would you be open to a short call next week to see if that fits Zinnia Roof & Repair?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Northgate Ridge Roofing",
+    "placeId": "mock_016",
+    "address": "4992 Dovetail Blvd , Dallas, TX 75235",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0158",
+    "website": "https://northgate-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Northgate%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": null,
+    "reviewsCount": 0,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Northgate Ridge Roofing | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Northgate Ridge Roofing</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550158\">Call us</a><footer>&copy; 2024 Northgate Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 64,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The homepage has no online booking tool, so customers who want a roof inspection after hours have to call or leave a message and may book elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "Mobile speed is middling",
+            "detail": "The PageSpeed mobile score is 64/100, which is slow enough that some visitors on phones may leave before reaching the contact details.",
+            "severity": "medium"
+          },
+          {
+            "label": "No Google reviews yet",
+            "detail": "The Google listing shows zero reviews, so new searchers have little social proof to pick this roofer over competitors with ratings.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Northgate Ridge Roofing's site has click-to-call but no way to book an inspection online, and I wanted to ask about that.",
+        "pitch": "Apex Growth Agency builds mobile-friendly websites with online booking and helps local businesses grow their Google reviews, so visitors can schedule without waiting for a callback. Would you be open to a short call next week to see whether that would help Northgate Ridge fill its calendar?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Thistle Roofing Co",
+    "placeId": "mock_017",
+    "address": "8851 Marlbrook Blvd , Dallas, TX 75238",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0118",
+    "website": "https://thistle-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Thistle%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4,
+    "reviewsCount": 117,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2025-10-13T12:42:00.000Z"
+      },
+      {
+        "text": "Decent repair work. Would like a faster response next time.",
+        "stars": 3,
+        "publishedAtDate": "2026-08-26T13:46:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Thistle Roofing Co | Dallas, TX</title></head><body><h1>Thistle Roofing Co</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><footer>&copy; 2020 Thistle Roofing Co</footer></body></html>",
+      "pagespeedMobile": 50,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners ready to schedule a roof repair have to call or wait, and many will go to a competitor who lets them book instantly.",
+            "severity": "high"
+          },
+          {
+            "label": "No click-to-call on site",
+            "detail": "The homepage has no click-to-call link, which makes phoning the business harder on a phone, where most local searches happen.",
+            "severity": "high"
+          },
+          {
+            "label": "Not mobile-optimized",
+            "detail": "The mobile viewport is missing and PageSpeed mobile is 50/100, so visitors on phones face a slow, awkward page that weakens trust and search ranking.",
+            "severity": "medium"
+          },
+          {
+            "label": "Reviews mention slow response",
+            "detail": "One of two recent reviews asks for a faster response and the other reports being rescheduled twice, which suggests scheduling friction that online booking could reduce.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "slow response",
+          "scheduling delays",
+          "quality repair work",
+          "disorganized office"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Thistle, your site has no online booking and a 50 mobile speed score, so some roof jobs may be going to competitors.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local businesses collect more Google reviews, which could cut the scheduling back-and-forth your recent customers mentioned. Would you be open to a short call next week to see if it fits Thistle Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Hollis Ridge Roofing",
+    "placeId": "mock_018",
+    "address": "4658 Mulberry Bend Dr , Dallas, TX 75254",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0133",
+    "website": "https://hollis-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Hollis%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.7,
+    "reviewsCount": 1,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/hollis-ridge-roofing"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Cleaned up every nail in the yard. Impressed.",
+        "stars": 5,
+        "publishedAtDate": "2026-02-13T12:13:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Hollis Ridge Roofing | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Hollis Ridge Roofing</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550133\">Call us</a><a href=\"https://instagram.com/hollis-ridge-roofing\">Instagram</a><footer>&copy; 2019 Hollis Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 69,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want a roof inspection after hours have to call or leave the site without scheduling.",
+            "severity": "high"
+          },
+          {
+            "label": "Mobile speed score 69",
+            "detail": "A PageSpeed mobile score of 69 out of 100 means the homepage loads slowly on phones, where most local roofing searches happen, which can push visitors to competitors.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year on the site reads 2019, which can make the business look less active to a homeowner comparing contractors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Thorough cleanup work",
+          "Positive first impression"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Hollis Ridge has a 4.7 rating, but your site has no way to book an inspection online.",
+        "pitch": "We build mobile-friendly sites with online booking and help local roofing companies grow their Google reviews, so customers can schedule without a phone call. Would you be open to a short call next week to see whether that fits Hollis Ridge?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Lantern Roofing Pros",
+    "placeId": "mock_019",
+    "address": "433 Montrose Ave , Dallas, TX 75216",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0117",
+    "website": "https://lantern-roofing-pros.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Lantern%20Roofing%20Pros",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.5,
+    "reviewsCount": 184,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/lantern-roofing-pros"
+    ],
+    "instagrams": [
+      "https://instagram.com/lantern-roofing-pros"
+    ],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Lantern Roofing Pros | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Lantern Roofing Pros</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"/book\">Book online</a><a href=\"https://facebook.com/lantern-roofing-pros\">Facebook</a><a href=\"https://instagram.com/lantern-roofing-pros\">Instagram</a><footer>&copy; 2023 Lantern Roofing Pros</footer></body></html>",
+      "pagespeedMobile": 89,
+      "ai": {
+        "findings": [
+          {
+            "label": "Low Google rating",
+            "detail": "At 3.5 stars across 184 reviews, the listing rating sits below the level many homeowners expect before they call, which can cost jobs to competitors rated higher.",
+            "severity": "medium"
+          },
+          {
+            "label": "No click-to-call on site",
+            "detail": "The homepage has no click-to-call link, so a mobile visitor who wants to phone the roofer has to hunt for the number, which can lose calls.",
+            "severity": "high"
+          },
+          {
+            "label": "Generic booking tool",
+            "detail": "Online booking runs on a generic tool, and the site's copyright year is 2023, which suggests the booking flow may not be actively maintained.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Lantern Roofing, your site loads fast on mobile, but I noticed visitors have no one-tap way to call you.",
+        "pitch": "Apex Growth Agency builds mobile sites with click-to-call and booking, and works on Google review growth to lift your 3.5 rating. Would you be open to a short call next week to see if this fits your plans?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Verity Roof & Repair",
+    "placeId": "mock_020",
+    "address": "9533 Dovetail Blvd , Dallas, TX 75246",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0131",
+    "website": "https://verity-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Verity%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.9,
+    "reviewsCount": 116,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/verity-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Cleanup was sloppy. Found nails in the tire two weeks later.",
+        "stars": 1,
+        "publishedAtDate": "2026-07-20T18:45:00.000Z"
+      },
+      {
+        "text": "Helped us with the adjuster visit and got the claim approved.",
+        "stars": 5,
+        "publishedAtDate": "2025-11-25T20:10:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Verity Roof & Repair | Dallas, TX</title></head><body><h1>Verity Roof & Repair</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550131\">Call us</a><a href=\"https://facebook.com/verity-roof-repair\">Facebook</a><footer>&copy; 2024 Verity Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 59,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking tool, so homeowners who want a roof inspection after hours have to call and may pick a competitor that lets them book instantly.",
+            "severity": "high"
+          },
+          {
+            "label": "Poor mobile speed",
+            "detail": "The site has no mobile viewport setting and scores 59/100 on mobile PageSpeed, which likely makes phone visitors leave before they reach the contact details.",
+            "severity": "high"
+          },
+          {
+            "label": "Cleanup complaint in reviews",
+            "detail": "A recent 1-star review says the crew left nails in a tire two weeks after the job, which can scare off buyers reading reviews before they call.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Sloppy job cleanup",
+          "Insurance claim help",
+          "Adjuster visit support"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Verity, I noticed your site doesn't load well on phones and visitors can't book a roof inspection online.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local businesses grow their Google reviews, so visitors can act on your 3.9 rating. Would you be open to a short call next week to see if that would help Verity Roof & Repair?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Rustler Roofing Pros",
+    "placeId": "mock_021",
+    "address": "8131 Pecan Hollow Blvd , Dallas, TX 75224",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0171",
+    "website": "https://rustler-roofing-pros.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Rustler%20Roofing%20Pros",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.3,
+    "reviewsCount": 129,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/rustler-roofing-pros"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Good crew, but the estimate took ten days to arrive.",
+        "stars": 3,
+        "publishedAtDate": "2026-07-26T07:22:00.000Z"
+      },
+      {
+        "text": "Friendly crew, clear communication from start to finish.",
+        "stars": 4,
+        "publishedAtDate": "2026-06-14T17:23:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Rustler Roofing Pros | Dallas, TX</title></head><body><h1>Rustler Roofing Pros</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550171\">Call us</a><a href=\"https://facebook.com/rustler-roofing-pros\">Facebook</a><footer>&copy; 2019 Rustler Roofing Pros</footer></body></html>",
+      "pagespeedMobile": 20,
+      "ai": {
+        "findings": [
+          {
+            "label": "Site not mobile-ready",
+            "detail": "The homepage fails the mobile viewport check and scores 20/100 on mobile PageSpeed, so phone visitors likely bounce before calling.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Customers cannot request an estimate or book a visit online, so anyone who prefers not to call loses to competitors who offer it.",
+            "severity": "high"
+          },
+          {
+            "label": "Outdated copyright year",
+            "detail": "The site footer shows 2019, which suggests it has not been updated in years and weakens trust with new visitors.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "slow estimate turnaround",
+          "friendly crew",
+          "clear communication"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your 3.3 rating and a site that scores 20 on mobile tell me many Dallas homeowners are bouncing before they call.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local roofers collect more Google reviews, which could speed up how quickly customers request estimates. Would you be open to a short call next week to see whether this fits your plans?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Willowbrook Roofing Group",
+    "placeId": "mock_022",
+    "address": "5425 Wexford Blvd , Dallas, TX 75214",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0168",
+    "website": "https://willowbrook-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Willowbrook%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.4,
+    "reviewsCount": 227,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Waited a week for a callback just to get an estimate.",
+        "stars": 2,
+        "publishedAtDate": "2026-05-14T20:46:00.000Z"
+      },
+      {
+        "text": "Clean install and the ridge vent works well. Attic is cooler.",
+        "stars": 5,
+        "publishedAtDate": "2026-07-09T12:54:00.000Z"
+      },
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2026-01-27T08:17:00.000Z"
+      },
+      {
+        "text": "Quoted a range and landed at the top of it.",
+        "stars": 3,
+        "publishedAtDate": "2026-05-08T19:29:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Willowbrook Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Willowbrook Roofing Group</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550168\">Call us</a><footer>&copy; 2025 Willowbrook Roofing Group</footer></body></html>",
+      "pagespeedMobile": 36,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want an estimate must call or wait, and many will book a competitor who lets them schedule on the spot.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile site",
+            "detail": "Mobile PageSpeed is 36/100, which pushes visitors away before they reach the phone number and hurts Google rankings for local roofing searches.",
+            "severity": "medium"
+          },
+          {
+            "label": "Callback and quote complaints",
+            "detail": "Reviews say a callback took a week and a quote landed at the top of the range, which suggests slow follow-up is costing trust and jobs.",
+            "severity": "medium"
+          },
+          {
+            "label": "Low star rating",
+            "detail": "A 3.4 rating across 227 reviews is well below what most homeowners expect from a roofer, so buyers may skip them before calling.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "clean installation",
+          "slow callbacks",
+          "quote higher than expected",
+          "storm damage inspection",
+          "ridge vent work"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Your 36/100 mobile PageSpeed score means homeowners searching for a roofer on their phones may be leaving before they call.",
+        "pitch": "We help roofing companies like yours add mobile-friendly pages with online booking and grow Google reviews, so estimate requests come in without the week-long wait. Would you be open to a short call next week to see if that fits Willowbrook?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Umber Roof & Repair",
+    "placeId": "mock_023",
+    "address": "7442 Marlbrook St , Dallas, TX 75219",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0185",
+    "website": "https://umber-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Umber%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.4,
+    "reviewsCount": 310,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/umber-roof-repair"
+    ],
+    "instagrams": [
+      "https://instagram.com/umber-roof-repair"
+    ],
+    "emails": [
+      "office@umber-roof-repair.example"
+    ],
+    "reviews": [
+      {
+        "text": "Quick turnaround on an emergency tarp after a tree fell.",
+        "stars": 5,
+        "publishedAtDate": "2026-06-07T08:15:00.000Z"
+      },
+      {
+        "text": "Crew showed up on time and finished in one day. Roof looks great.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-14T14:35:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Umber Roof & Repair | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Umber Roof & Repair</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550185\">Call us</a><a href=\"https://facebook.com/umber-roof-repair\">Facebook</a><a href=\"https://instagram.com/umber-roof-repair\">Instagram</a><footer>&copy; 2019 Umber Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 25,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile site",
+            "detail": "The homepage scored 25/100 on PageSpeed mobile, so many phone visitors may leave before the page loads and call a competitor.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so customers who want to schedule a roof inspection at night or on weekends have to call and wait.",
+            "severity": "high"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year on the site reads 2019, which makes the business look less active to people comparing roofers.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "on-time crew",
+          "fast turnaround",
+          "emergency tarp service",
+          "clean roof work"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your 4.4-star rating with 310 reviews is strong, but your homepage takes a long time to load on phones.",
+        "pitch": "We help local service businesses like yours tighten up mobile pages and add online booking so more of your nearby customers can book without calling. Would you be open to a short call this week to see whether that fits Umber Roof & Repair?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Driftwood Roofing Co",
+    "placeId": "mock_024",
+    "address": "3133 Ostrander Ave , Dallas, TX 75248",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0174",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Driftwood%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.8,
+    "reviewsCount": 302,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/driftwood-roofing-co"
+    ],
+    "instagrams": [],
+    "emails": [
+      "office@driftwood-roofing-co.example"
+    ],
+    "reviews": [
+      {
+        "text": "Great experience. Texted updates every morning before the crew arrived.",
+        "stars": 5,
+        "publishedAtDate": "2026-03-12T18:29:00.000Z"
+      },
+      {
+        "text": "Left shingles and nails all over the driveway.",
+        "stars": 2,
+        "publishedAtDate": "2026-02-10T11:14:00.000Z"
+      },
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2025-11-24T10:20:00.000Z"
+      },
+      {
+        "text": "Quick turnaround on an emergency tarp after a tree fell.",
+        "stars": 5,
+        "publishedAtDate": "2025-11-24T15:48:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Driftwood has no website on record, so homeowners searching for a roofer after storm damage have nowhere to request a quote or book a visit online.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "With no site and no booking tool, customers must call or wait for a callback, and the reviews already mention rescheduling problems that a booking form would reduce.",
+            "severity": "high"
+          },
+          {
+            "label": "Reviews mention scheduling gaps",
+            "detail": "One review says the office was disorganized and the job was rescheduled twice, which can push price-shopping customers toward competitors who make booking easy.",
+            "severity": "medium"
+          },
+          {
+            "label": "Strong 3.8 rating with 302 reviews",
+            "detail": "A large review base is a real asset, but without a website those reviews send new visitors to a dead end instead of a contact path.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "daily crew updates",
+          "shingle debris cleanup",
+          "emergency tarp response",
+          "disorganized office",
+          "rescheduling delays"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Your 302 Google reviews are strong, but a homeowner searching for a roofer today can't find a website or book a visit.",
+        "pitch": "We build mobile-friendly websites with online booking and help local businesses grow their Google reviews, so customers can request service in a few taps. Would you be open to a short call next week to see if that fits Driftwood?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Foxglove Roof & Repair",
+    "placeId": "mock_025",
+    "address": "5052 Marlbrook Way , Dallas, TX 75235",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0154",
+    "website": "https://foxglove-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Foxglove%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.2,
+    "reviewsCount": 273,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/foxglove-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Foxglove Roof & Repair | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Foxglove Roof & Repair</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550154\">Call us</a><a href=\"https://facebook.com/foxglove-roof-repair\">Facebook</a><footer>&copy; 2017 Foxglove Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 24,
+      "ai": {
+        "findings": [
+          {
+            "label": "Very slow mobile site",
+            "detail": "The homepage scores 24/100 on mobile PageSpeed, so visitors on phones are likely to leave before the page loads and call a competitor.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "The site has no way to book a job online, so customers who want to schedule after hours have to call and may go elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "Outdated site footer",
+            "detail": "The copyright year on the site reads 2017, which can make a roofing company look inactive to new customers checking it out.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Your 24/100 mobile PageSpeed score means phone visitors may be leaving Foxglove before they ever book a roof repair.",
+        "pitch": "We help local roofing companies like yours add mobile-friendly pages with online booking and build up Google reviews so more calls turn into jobs. Would you be open to a short call next week to see whether this makes sense for Foxglove?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Quillon Roof & Repair",
+    "placeId": "mock_026",
+    "address": "3120 Tindall Dr , Dallas, TX 75231",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0176",
+    "website": "https://quillon-roof-repair.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Quillon%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.4,
+    "reviewsCount": 154,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/quillon-roof-repair"
+    ],
+    "instagrams": [
+      "https://instagram.com/quillon-roof-repair"
+    ],
+    "emails": [
+      "office@quillon-roof-repair.example"
+    ],
+    "reviews": [
+      {
+        "text": "Decent repair work. Would like a faster response next time.",
+        "stars": 3,
+        "publishedAtDate": "2025-11-28T07:36:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Quillon Roof & Repair | Dallas, TX</title></head><body><h1>Quillon Roof & Repair</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550176\">Call us</a><a href=\"https://facebook.com/quillon-roof-repair\">Facebook</a><a href=\"https://instagram.com/quillon-roof-repair\">Instagram</a><footer>&copy; 2024 Quillon Roof & Repair</footer></body></html>",
+      "pagespeedMobile": 58,
+      "ai": {
+        "findings": [
+          {
+            "label": "Site not mobile-ready",
+            "detail": "The homepage has no mobile viewport tag and scores 58/100 on mobile PageSpeed, so phone visitors likely face a cramped, slow page and leave before calling.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "The site offers no online booking tool, so homeowners who want to schedule after hours have to call or go elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow response complaint",
+            "detail": "1 of the 1 recent reviews asks for a faster response next time, which points to slow callbacks or follow-up costing repeat work.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Repair quality",
+          "Slow response"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Quillon, your 4.4-star rating is strong, but your site does not adjust to phone screens and has no way to book online.",
+        "pitch": "That gap is where Apex Growth Agency helps local roofers, with mobile-friendly sites that include online booking and steady Google review growth. Would you be open to a short call this week to see if it fits?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Yucca Flat Roofing Co",
+    "placeId": "mock_027",
+    "address": "4166 Pecan Hollow Ln , Dallas, TX 75249",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0196",
+    "website": "https://yucca-flat-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Yucca%20Flat%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.2,
+    "reviewsCount": 300,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/yucca-flat-roofing-co"
+    ],
+    "instagrams": [
+      "https://instagram.com/yucca-flat-roofing-co"
+    ],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Yucca Flat Roofing Co | Dallas, TX</title></head><body><h1>Yucca Flat Roofing Co</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"/book\">Book online</a><a href=\"https://facebook.com/yucca-flat-roofing-co\">Facebook</a><a href=\"https://instagram.com/yucca-flat-roofing-co\">Instagram</a><footer>&copy; 2022 Yucca Flat Roofing Co</footer></body></html>",
+      "pagespeedMobile": 49,
+      "ai": {
+        "findings": [
+          {
+            "label": "No mobile viewport",
+            "detail": "The homepage has no mobile viewport tag, so phone visitors likely see a shrunken desktop layout and may leave before calling.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile pagespeed",
+            "detail": "PageSpeed mobile scores 49/100, which slows loading for customers searching for a roofer on their phones and can hurt local search ranking.",
+            "severity": "medium"
+          },
+          {
+            "label": "No click-to-call",
+            "detail": "The site has no click-to-call link, so a visitor on a phone has to copy the number and dial it manually, which costs calls.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year reads 2022, which can make the business look less active to people comparing roofers.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Yucca Flat Roofing, your homepage isn't set up for phones, and that may be sending some roofing calls elsewhere.",
+        "pitch": "We build mobile-friendly sites with online booking, click-to-call, and Google review growth for local service businesses like yours. Would you be open to a short call this week to see if it's a fit?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Ivywood Roofing Group",
+    "placeId": "mock_028",
+    "address": "143 Mulberry Bend Blvd , Dallas, TX 75245",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0146",
+    "website": "https://ivywood-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Ivywood%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.8,
+    "reviewsCount": 4,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/ivywood-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "No-show for the estimate. Had to take another day off work.",
+        "stars": 1,
+        "publishedAtDate": "2026-02-19T16:03:00.000Z"
+      },
+      {
+        "text": "Would not recommend. Never heard back after paying the deposit.",
+        "stars": 1,
+        "publishedAtDate": "2026-07-24T08:48:00.000Z"
+      },
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2026-01-21T10:16:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Ivywood Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Ivywood Roofing Group</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550146\">Call us</a><script src=\"https://assets.calendly.com/assets/external/widget.js\"></script><a href=\"https://facebook.com/ivywood-roofing-group\">Facebook</a><footer>&copy; 2023 Ivywood Roofing Group</footer></body></html>",
+      "pagespeedMobile": 82,
+      "ai": {
+        "findings": [
+          {
+            "label": "Missed follow-up after payment",
+            "detail": "One reviewer says they never heard back after paying a deposit, which suggests leads and paying customers can slip through without a reliable follow-up process.",
+            "severity": "high"
+          },
+          {
+            "label": "Scheduling reliability complaints",
+            "detail": "Two reviews mention a no-show for an estimate and rescheduling twice, which costs trust before the job even starts.",
+            "severity": "high"
+          },
+          {
+            "label": "Rating below 4 stars",
+            "detail": "The listing shows 3.8 stars from 4 reviews, so a few negative experiences are pulling the public rating down in front of new customers.",
+            "severity": "medium"
+          },
+          {
+            "label": "Copyright year out of date",
+            "detail": "The website footer shows 2023, which makes the site look less maintained to someone comparing roofers.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "missed follow-up",
+          "no-show estimate",
+          "rescheduling problems",
+          "deposit payment",
+          "crew quality praised"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Ivywood, I saw two reviews about missed estimate appointments and a deposit with no follow-up, and wanted to reach out.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and review growth tools that help keep appointments and follow-ups on track. Would you be open to a short call next week to see if that fits what you need?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Silverleaf Roof & Repair",
+    "placeId": "mock_029",
+    "address": "4452 Larkin St , Dallas, TX 75204",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0128",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Silverleaf%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.6,
+    "reviewsCount": 366,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/silverleaf-roof-repair"
+    ],
+    "emails": [
+      "office@silverleaf-roof-repair.example"
+    ],
+    "reviews": [
+      {
+        "text": "Fixed our leak and it has stayed dry through three storms.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-19T17:51:00.000Z"
+      },
+      {
+        "text": "Professional from the first call to the final inspection.",
+        "stars": 5,
+        "publishedAtDate": "2026-01-14T08:34:00.000Z"
+      },
+      {
+        "text": "Called three times before anyone got back to me.",
+        "stars": 2,
+        "publishedAtDate": "2026-01-21T09:58:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Silverleaf has no website on its Google listing, so customers comparing roofers online have nowhere to check services or request a quote, and they will likely call a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow callbacks in reviews",
+            "detail": "One of the three recent reviews complains about being called three times before anyone responded, which points to lost leads that a booking form could catch.",
+            "severity": "medium"
+          },
+          {
+            "label": "Strong rating, weak online presence",
+            "detail": "A 3.6 rating across 366 reviews shows real customer volume, but without a site or booking option that reputation is not converting into online inquiries.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Leak repair quality",
+          "Storm-proof results",
+          "Slow callback response",
+          "Professional service"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your crew has 366 Google reviews, but a customer looking for a roofer tonight finds no website to book from.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses grow their Google reviews, so calls like the ones you already get can turn into booked jobs. Would you be open to a short call next week to see if that makes sense for Silverleaf?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Stonebridge Roofing Group",
+    "placeId": "mock_030",
+    "address": "4515 Laurel Crest St , Dallas, TX 75249",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0181",
+    "website": "https://stonebridge-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Stonebridge%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.8,
+    "reviewsCount": 4,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/stonebridge-roofing-group"
+    ],
+    "instagrams": [
+      "https://instagram.com/stonebridge-roofing-group"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Friendly crew, clear communication from start to finish.",
+        "stars": 4,
+        "publishedAtDate": "2026-09-13T11:32:00.000Z"
+      },
+      {
+        "text": "Insurance paperwork took forever, but the roof itself is fine.",
+        "stars": 3,
+        "publishedAtDate": "2026-06-16T14:05:00.000Z"
+      },
+      {
+        "text": "No-show for the estimate. Had to take another day off work.",
+        "stars": 1,
+        "publishedAtDate": "2026-07-02T13:47:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Stonebridge Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Stonebridge Roofing Group</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550181\">Call us</a><script src=\"https://assets.calendly.com/assets/external/widget.js\"></script><a href=\"https://facebook.com/stonebridge-roofing-group\">Facebook</a><a href=\"https://instagram.com/stonebridge-roofing-group\">Instagram</a><footer>&copy; 2021 Stonebridge Roofing Group</footer></body></html>",
+      "pagespeedMobile": 60,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile homepage",
+            "detail": "PageSpeed mobile score is 60, so phone visitors may wait long enough to leave before requesting a roof estimate.",
+            "severity": "medium"
+          },
+          {
+            "label": "Estimate no-show complaint",
+            "detail": "A 1-star review says the company no-showed an estimate and cost the customer a day off work, which can push future callers toward competitors.",
+            "severity": "high"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The site copyright reads 2021, which suggests the website has not been updated in a while and weakens first impressions.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Friendly crew",
+          "Clear communication",
+          "Missed estimate appointment",
+          "Slow insurance paperwork",
+          "Solid roof work"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Stonebridge, your 4.8 rating is strong, but your homepage loads slowly on phones, which may cost you estimate requests.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps local businesses collect more Google reviews, which could help you keep callers and reduce missed appointments. Would you be open to a short call next week to see if this fits Stonebridge?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Alder Roofing Group",
+    "placeId": "mock_031",
+    "address": "4235 Sundial St , Dallas, TX 75250",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0165",
+    "website": "https://alder-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Alder%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.4,
+    "reviewsCount": 147,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2026-03-14T12:20:00.000Z"
+      },
+      {
+        "text": "Decent repair work. Would like a faster response next time.",
+        "stars": 3,
+        "publishedAtDate": "2026-08-04T20:10:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2026-03-14T18:31:00.000Z"
+      },
+      {
+        "text": "Quoted a range and landed at the top of it.",
+        "stars": 3,
+        "publishedAtDate": "2026-02-22T13:52:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Alder Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Alder Roofing Group</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550165\">Call us</a><footer>&copy; 2024 Alder Roofing Group</footer></body></html>",
+      "pagespeedMobile": 88,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking tool, so homeowners who want to schedule a roof inspection after hours have to call or wait, and some will go to a competitor who lets them book directly.",
+            "severity": "high"
+          },
+          {
+            "label": "Low rating for volume",
+            "detail": "A 3.4 rating across 147 reviews is below what most homeowners expect from a roofer, and it can push price-shopping customers toward competitors with stronger scores.",
+            "severity": "medium"
+          },
+          {
+            "label": "Scheduling and response complaints",
+            "detail": "Reviewers ask for a faster response and mention rescheduling twice, which suggests the office side of the business is costing trust even when the crew work is praised.",
+            "severity": "medium"
+          },
+          {
+            "label": "Mobile speed is adequate",
+            "detail": "The site is reachable, uses HTTPS, has a mobile viewport, and scores 88 on mobile PageSpeed, so speed is not the main gap.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "faster response",
+          "honest recommendations",
+          "disorganized office",
+          "rescheduled appointments",
+          "quote accuracy",
+          "crew quality"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Alder, your crew gets praised in reviews, but several customers are asking for faster responses and easier scheduling.",
+        "pitch": "That gap between good crews and slow scheduling is what our mobile-friendly sites with online booking and review growth are built to close. Would you be open to a short call next week to see whether it fits Alder Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Knoll Roofing Group",
+    "placeId": "mock_032",
+    "address": "2089 Marlbrook Way , Dallas, TX 75239",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0187",
+    "website": "https://knoll-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Knoll%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.7,
+    "reviewsCount": 341,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/knoll-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Work was okay, but I had to chase them to get the invoice.",
+        "stars": 3,
+        "publishedAtDate": "2026-06-12T16:48:00.000Z"
+      },
+      {
+        "text": "Cleaned up every nail in the yard. Impressed.",
+        "stars": 5,
+        "publishedAtDate": "2026-05-21T14:48:00.000Z"
+      },
+      {
+        "text": "The owner walked the roof with me and explained everything.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-07T11:35:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Knoll Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Knoll Roofing Group</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550187\">Call us</a><a href=\"https://facebook.com/knoll-roofing-group\">Facebook</a><footer>&copy; 2025 Knoll Roofing Group</footer></body></html>",
+      "pagespeedMobile": 22,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile site",
+            "detail": "PageSpeed mobile score is 22/100, so homeowners searching on their phones may bounce before they call or request a quote.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want to schedule an inspection after hours have to call or leave the site.",
+            "severity": "high"
+          },
+          {
+            "label": "Invoice follow-up complaint",
+            "detail": "One of the three recent reviews says the customer had to chase an invoice, which can make new customers hesitate before hiring.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Clean job site",
+          "Owner walkthrough",
+          "Invoice follow-up",
+          "Strong overall rating"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your 4.7 rating on 341 reviews is strong, but your site's mobile PageSpeed score is 22 out of 100.",
+        "pitch": "That gap between your reputation and your website is where we help, with mobile-friendly sites, online booking, and review growth for roofing companies like yours. Would you be open to a short call next week to see whether it makes sense for Knoll Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Zephyr Ridge Roofing",
+    "placeId": "mock_033",
+    "address": "2622 Greywing Way , Dallas, TX 75219",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0111",
+    "website": "https://zephyr-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Zephyr%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.1,
+    "reviewsCount": 12,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [],
+    "emails": [
+      "office@zephyr-ridge-roofing.example"
+    ],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Zephyr Ridge Roofing | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Zephyr Ridge Roofing</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550111\">Call us</a><footer>&copy; 2016 Zephyr Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 54,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want a roof inspection after hours have to call or leave the site without scheduling.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile load time",
+            "detail": "The PageSpeed mobile score is 54, so many people searching on their phones for a roofer may leave before the page finishes loading.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year on the homepage is 2016, which can make the business look less active and weaken trust with first-time visitors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Your site lets Dallas homeowners call you, but there is no way to book a roof inspection online.",
+        "pitch": "Apex Growth Agency builds mobile-friendly websites with online booking, so visitors can schedule a visit without picking up the phone. Would you be open to a short call next week to see whether that would fit Zephyr Ridge Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Kestrel Shingle Works",
+    "placeId": "mock_034",
+    "address": "7416 Kingsbury Blvd , Dallas, TX 75223",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0106",
+    "website": "https://kestrel-shingle-works.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Kestrel%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.5,
+    "reviewsCount": 246,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/kestrel-shingle-works"
+    ],
+    "instagrams": [
+      "https://instagram.com/kestrel-shingle-works"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Solid roof, decent price. Scheduling was a little tight.",
+        "stars": 4,
+        "publishedAtDate": "2026-06-24T09:55:00.000Z"
+      },
+      {
+        "text": "Hard to reach by phone and the office never returns voicemails.",
+        "stars": 2,
+        "publishedAtDate": "2025-11-09T19:50:00.000Z"
+      },
+      {
+        "text": "The owner walked the roof with me and explained everything.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-11T19:32:00.000Z"
+      },
+      {
+        "text": "Good crew, but the estimate took ten days to arrive.",
+        "stars": 3,
+        "publishedAtDate": "2026-02-27T07:18:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Kestrel Shingle Works | Dallas, TX</title></head><body><h1>Kestrel Shingle Works</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><script src=\"https://scheduler.servicetitan.com/embed.js\"></script><a href=\"https://facebook.com/kestrel-shingle-works\">Facebook</a><a href=\"https://instagram.com/kestrel-shingle-works\">Instagram</a><footer>&copy; 2023 Kestrel Shingle Works</footer></body></html>",
+      "pagespeedMobile": 86,
+      "ai": {
+        "findings": [
+          {
+            "label": "No mobile viewport",
+            "detail": "The homepage has no mobile viewport tag, so phone visitors may see a shrunken desktop layout and leave before calling, costing roof-repair jobs.",
+            "severity": "high"
+          },
+          {
+            "label": "No click-to-call",
+            "detail": "The site has no tap-to-call phone link, and one reviewer says the office is hard to reach by phone, so urgent leads may go to a competitor.",
+            "severity": "high"
+          },
+          {
+            "label": "Phone responsiveness complaints",
+            "detail": "Reviews mention hard-to-reach phones, unreturned voicemails, and a ten-day estimate wait, which weakens trust and star ratings at 3.5 overall.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated copyright year",
+            "detail": "The site footer shows 2023, which can signal an neglected site to visitors comparing contractors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Hard to reach",
+          "Slow estimates",
+          "Solid roof work",
+          "Fair pricing",
+          "Owner involvement",
+          "Tight scheduling"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Kestrel, your site doesn't adjust to phone screens and has no tap-to-call button, so mobile visitors may be calling someone else.",
+        "pitch": "We build mobile-friendly sites with online booking and tap-to-call for local contractors, plus help growing Google reviews. Would you be open to a short call next week to see if that fits Kestrel?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Nettle Roofing Group",
+    "placeId": "mock_035",
+    "address": "351 Larkin Blvd , Dallas, TX 75242",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0114",
+    "website": "https://nettle-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Nettle%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.7,
+    "reviewsCount": 169,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/nettle-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [
+      "office@nettle-roofing-group.example"
+    ],
+    "reviews": [
+      {
+        "text": "Roof looks good, though the gutters needed a touch-up after.",
+        "stars": 4,
+        "publishedAtDate": "2025-10-11T18:30:00.000Z"
+      },
+      {
+        "text": "Roofers were polite and kept the dog away from the work area.",
+        "stars": 4,
+        "publishedAtDate": "2026-09-26T13:24:00.000Z"
+      },
+      {
+        "text": "Hard to reach by phone and the office never returns voicemails.",
+        "stars": 2,
+        "publishedAtDate": "2026-08-26T20:41:00.000Z"
+      },
+      {
+        "text": "Professional from the first call to the final inspection.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-16T07:08:00.000Z"
+      },
+      {
+        "text": "Work was okay, but I had to chase them to get the invoice.",
+        "stars": 3,
+        "publishedAtDate": "2026-06-19T12:55:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Nettle Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Nettle Roofing Group</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550114\">Call us</a><a href=\"https://facebook.com/nettle-roofing-group\">Facebook</a><footer>&copy; 2025 Nettle Roofing Group</footer></body></html>",
+      "pagespeedMobile": 46,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking tool, so homeowners who want a roof inspection after hours have to call and may go to a competitor that lets them book instantly.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile page speed",
+            "detail": "The homepage scores 46/100 on PageSpeed mobile, and most local searches happen on phones, so slow loading may push visitors to faster roofers.",
+            "severity": "medium"
+          },
+          {
+            "label": "Phone responsiveness complaints",
+            "detail": "One of the five recent reviews says the office is hard to reach and never returns voicemails, which can cost leads who call once and move on.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "polite roofing crew",
+          "hard to reach by phone",
+          "slow invoice follow-up",
+          "professional service",
+          "gutter touch-up"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Nettle Roofing Group has a 4.7 rating from 169 reviews, but the site has no way to book an inspection online.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking, so customers can schedule a roof inspection any time without waiting on a callback. Would you be open to a short call next week to see whether that fits how you take on new jobs?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Orchard Row Roofing Co",
+    "placeId": "mock_036",
+    "address": "853 Sundial St , Dallas, TX 75219",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0119",
+    "website": "https://orchard-row-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Orchard%20Row%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.7,
+    "reviewsCount": 140,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/orchard-row-roofing-co"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Price was fine but the project ran a week over with no updates.",
+        "stars": 3,
+        "publishedAtDate": "2026-03-21T18:56:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2026-05-28T15:02:00.000Z"
+      },
+      {
+        "text": "Paid for a repair and the same spot leaked again a month later.",
+        "stars": 2,
+        "publishedAtDate": "2026-07-03T10:40:00.000Z"
+      },
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-10T10:47:00.000Z"
+      },
+      {
+        "text": "Hard to reach by phone and the office never returns voicemails.",
+        "stars": 2,
+        "publishedAtDate": "2025-11-14T08:48:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Orchard Row Roofing Co | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Orchard Row Roofing Co</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550119\">Call us</a><a href=\"/book\">Book online</a><a href=\"https://instagram.com/orchard-row-roofing-co\">Instagram</a><footer>&copy; 2022 Orchard Row Roofing Co</footer></body></html>",
+      "pagespeedMobile": 80,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow responses after the sale",
+            "detail": "Reviews say the project ran a week over with no updates and the office never returns voicemails, which likely pushes customers to competitors who answer faster.",
+            "severity": "high"
+          },
+          {
+            "label": "Repeat repair complaint",
+            "detail": "A 2-star review says the same spot leaked again a month after a paid repair, which hurts referrals and repeat work for a roofer.",
+            "severity": "medium"
+          },
+          {
+            "label": "Rating below 4 stars",
+            "detail": "The listing shows a 3.7 rating across 140 reviews, so a few more strong reviews would help this business stand out in local search.",
+            "severity": "medium"
+          },
+          {
+            "label": "Dated website footer",
+            "detail": "The site shows a 2022 copyright year and a PageSpeed mobile score of 80, which suggests the site is aging but still functional.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "storm damage found",
+          "honest recommendations",
+          "repair quality issues",
+          "project delays",
+          "slow phone response",
+          "no updates on jobs",
+          "fair pricing"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Your reviews praise your honesty on repairs, but a few customers say calls and voicemails go unanswered.",
+        "pitch": "We help roofing companies in Dallas turn that honesty into more booked jobs with a mobile-friendly site, online booking, and review growth. Would you be open to a short call next week to see if it fits?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Dunmore Shingle Works",
+    "placeId": "mock_037",
+    "address": "4261 Fairhaven Dr , Dallas, TX 75243",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0120",
+    "website": "https://dunmore-shingle-works.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Dunmore%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.1,
+    "reviewsCount": 215,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/dunmore-shingle-works"
+    ],
+    "instagrams": [],
+    "emails": [
+      "office@dunmore-shingle-works.example"
+    ],
+    "reviews": [
+      {
+        "text": "Helped us with the adjuster visit and got the claim approved.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-03T16:55:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Dunmore Shingle Works | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Dunmore Shingle Works</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550120\">Call us</a><script src=\"https://embed.housecallpro.com/widget.js\"></script><a href=\"https://facebook.com/dunmore-shingle-works\">Facebook</a><footer>&copy; 2025 Dunmore Shingle Works</footer></body></html>",
+      "pagespeedMobile": 64,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile homepage",
+            "detail": "The homepage scores 64 out of 100 on mobile PageSpeed, so some phone visitors may leave before they reach the booking or call buttons.",
+            "severity": "medium"
+          },
+          {
+            "label": "Thin social presence",
+            "detail": "Only a Facebook link appears on the site, which gives customers fewer places to check recent work and build trust before calling.",
+            "severity": "low"
+          },
+          {
+            "label": "Rating trails review volume",
+            "detail": "The 4.1 star rating across 215 reviews is solid, but a lower average than competitors could push some shoppers toward other shingle shops.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "insurance claim help",
+          "adjuster visit support"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your homepage scores 64 out of 100 on mobile speed, so some customers may leave before they call.",
+        "pitch": "Apex Growth Agency builds mobile-friendly websites with online booking, and phone page speed is a natural place to start. Would you be open to a short call next week to see if it makes sense for Dunmore Shingle Works?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Marlow Roofing Group",
+    "placeId": "mock_038",
+    "address": "7051 Quarterline Blvd , Dallas, TX 75220",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0186",
+    "website": "https://marlow-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Marlow%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.1,
+    "reviewsCount": 351,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/marlow-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [],
+    "mock": {
+      "homepageHtml": "<html><head><title>Marlow Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Marlow Roofing Group</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"https://facebook.com/marlow-roofing-group\">Facebook</a><footer>&copy; 2024 Marlow Roofing Group</footer></body></html>",
+      "pagespeedMobile": 68,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking option, so homeowners who want a roof inspection at night or on weekends have to call and may book elsewhere.",
+            "severity": "high"
+          },
+          {
+            "label": "No click-to-call on site",
+            "detail": "The homepage has no click-to-call link, which makes it harder for mobile visitors to reach the business quickly.",
+            "severity": "medium"
+          },
+          {
+            "label": "Mobile speed score 68",
+            "detail": "A PageSpeed mobile score of 68 out of 100 means pages load slowly on phones, where many roofing leads start their search.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [],
+        "complaintCount": 0,
+        "firstLine": "Marlow, your site has no online booking, so a homeowner ready to schedule after hours has to call first.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses grow their Google reviews, so customers can book without waiting on a phone call. Would you be open to a short call next week to see whether that fits Marlow Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Vantage Roofing Co",
+    "placeId": "mock_039",
+    "address": "4789 Brindle Ln , Dallas, TX 75252",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0143",
+    "website": "https://vantage-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Vantage%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.8,
+    "reviewsCount": 126,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/vantage-roofing-co"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Roofers were polite and kept the dog away from the work area.",
+        "stars": 4,
+        "publishedAtDate": "2026-09-10T07:53:00.000Z"
+      },
+      {
+        "text": "They missed our estimate appointment and never called.",
+        "stars": 1,
+        "publishedAtDate": "2026-08-13T11:00:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Vantage Roofing Co | Dallas, TX</title></head><body><h1>Vantage Roofing Co</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"https://facebook.com/vantage-roofing-co\">Facebook</a><footer>&copy; 2025 Vantage Roofing Co</footer></body></html>",
+      "pagespeedMobile": 76,
+      "ai": {
+        "findings": [
+          {
+            "label": "No mobile viewport",
+            "detail": "The homepage lacks a mobile viewport setting, so phone visitors likely see a shrunken desktop layout and may leave before calling for a roof estimate.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Customers cannot book an estimate online or click to call from the site, so homeowners comparing roofers may choose a competitor that makes booking easy.",
+            "severity": "high"
+          },
+          {
+            "label": "Missed estimate appointment",
+            "detail": "One of the two recent reviews says the crew missed an estimate appointment and never called, a complaint that online scheduling and reminders could help prevent.",
+            "severity": "medium"
+          },
+          {
+            "label": "Rating below 4 stars",
+            "detail": "At 3.8 stars across 126 reviews, the rating sits below the level many homeowners use as a cutoff when choosing a roofer.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "polite crew",
+          "missed appointments",
+          "no callback",
+          "respectful job site"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Vantage, your homepage doesn't work well on phones and visitors can't book an estimate online, which may be costing you roofing jobs.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online estimate booking and helps grow Google reviews, so homeowners can schedule with you on the spot. Would you be open to a short call next week to see if that fits Vantage Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Glenrock Roofing Co",
+    "placeId": "mock_040",
+    "address": "4935 Sundial St , Dallas, TX 75230",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0189",
+    "website": "https://glenrock-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Glenrock%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.5,
+    "reviewsCount": 352,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/glenrock-roofing-co"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Good job overall. Took a day longer than quoted but they called ahead.",
+        "stars": 4,
+        "publishedAtDate": "2025-10-19T12:46:00.000Z"
+      },
+      {
+        "text": "Quick, careful work after the hail. Would hire again.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-03T11:20:00.000Z"
+      },
+      {
+        "text": "They handled the whole insurance claim for us. Zero stress.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-14T09:12:00.000Z"
+      },
+      {
+        "text": "No-show for the estimate. Had to take another day off work.",
+        "stars": 1,
+        "publishedAtDate": "2025-12-26T15:56:00.000Z"
+      },
+      {
+        "text": "They said they would help with insurance, then went quiet.",
+        "stars": 2,
+        "publishedAtDate": "2026-03-17T15:58:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Glenrock Roofing Co | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Glenrock Roofing Co</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550189\">Call us</a><a href=\"https://facebook.com/glenrock-roofing-co\">Facebook</a><footer>&copy; 2019 Glenrock Roofing Co</footer></body></html>",
+      "pagespeedMobile": 57,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners with storm damage must call during business hours, and some will call a competitor who lets them book at night.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow mobile page",
+            "detail": "The homepage scores 57/100 on mobile PageSpeed, which can slow visitors on phones and push the site lower in local search results.",
+            "severity": "medium"
+          },
+          {
+            "label": "Missed estimate appointments",
+            "detail": "Two reviews mention a no-show or going quiet after promising insurance help, which signals missed follow-up that a booking and reminder flow could reduce.",
+            "severity": "medium"
+          },
+          {
+            "label": "Outdated copyright year",
+            "detail": "The site footer shows a 2019 copyright year, which makes the business look less current to visitors comparing contractors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "insurance claim help",
+          "missed estimate appointments",
+          "quick storm repair",
+          "delays past quotes",
+          "clear communication"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Your 4.5-star rating with 352 reviews is strong, but customers who want to book an estimate online currently can't.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and helps grow Google reviews, so more of those requests turn into booked estimates. Would you be open to a short call next week to see if that fits Glenrock Roofing?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Quarry Roofing Pros",
+    "placeId": "mock_041",
+    "address": "7824 Marlbrook Ln , Dallas, TX 75236",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0138",
+    "website": "https://quarry-roofing-pros.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Quarry%20Roofing%20Pros",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.4,
+    "reviewsCount": 351,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/quarry-roofing-pros"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Quick turnaround on an emergency tarp after a tree fell.",
+        "stars": 5,
+        "publishedAtDate": "2026-04-01T11:34:00.000Z"
+      },
+      {
+        "text": "Cleanup was sloppy. Found nails in the tire two weeks later.",
+        "stars": 1,
+        "publishedAtDate": "2025-11-15T12:43:00.000Z"
+      },
+      {
+        "text": "Honest about what needed replacing and what did not.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-22T11:37:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Quarry Roofing Pros | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Quarry Roofing Pros</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550138\">Call us</a><a href=\"https://instagram.com/quarry-roofing-pros\">Instagram</a><footer>&copy; 2023 Quarry Roofing Pros</footer></body></html>",
+      "pagespeedMobile": 64,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners who want a roof inspection after hours must call or leave the site, and some will book a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Mobile speed score 64",
+            "detail": "A PageSpeed mobile score of 64 out of 100 means pages load slowly on phones, where most local searches happen, which can cost clicks and search ranking.",
+            "severity": "medium"
+          },
+          {
+            "label": "Copyright dated 2023",
+            "detail": "The footer copyright year is 2023, which suggests the site has not been updated recently and can make a 351-review business look less current to visitors.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "honest recommendations",
+          "fast emergency response",
+          "sloppy cleanup"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your 4.4 rating from 351 reviews is strong, but visitors can't book a roof inspection online yet.",
+        "pitch": "That gap between your reputation and your online booking is exactly what Apex Growth Agency helps local service businesses close with mobile-friendly sites and online scheduling. Would you be open to a short call next week to see if it makes sense for Quarry Roofing Pros?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Emberly Roofing Pros",
+    "placeId": "mock_042",
+    "address": "6786 Quarterline St , Dallas, TX 75245",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0198",
+    "website": "https://emberly-roofing-pros.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Emberly%20Roofing%20Pros",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.6,
+    "reviewsCount": 330,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/emberly-roofing-pros"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "No-show for the estimate. Had to take another day off work.",
+        "stars": 1,
+        "publishedAtDate": "2025-10-10T14:07:00.000Z"
+      },
+      {
+        "text": "Work was okay, but I had to chase them to get the invoice.",
+        "stars": 3,
+        "publishedAtDate": "2025-11-08T15:08:00.000Z"
+      },
+      {
+        "text": "Friendly crew, clear communication from start to finish.",
+        "stars": 4,
+        "publishedAtDate": "2026-04-15T12:42:00.000Z"
+      },
+      {
+        "text": "Good job overall. Took a day longer than quoted but they called ahead.",
+        "stars": 4,
+        "publishedAtDate": "2026-09-23T15:26:00.000Z"
+      },
+      {
+        "text": "They handled the whole insurance claim for us. Zero stress.",
+        "stars": 5,
+        "publishedAtDate": "2026-07-24T18:09:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Emberly Roofing Pros | Dallas, TX</title></head><body><h1>Emberly Roofing Pros</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550198\">Call us</a><a href=\"/book\">Book online</a><a href=\"https://facebook.com/emberly-roofing-pros\">Facebook</a><footer>&copy; 2026 Emberly Roofing Pros</footer></body></html>",
+      "pagespeedMobile": 96,
+      "ai": {
+        "findings": [
+          {
+            "label": "Missing mobile viewport",
+            "detail": "The homepage has no mobile viewport setting, so phone visitors may get a cramped layout and leave before calling or booking, even though the PageSpeed mobile score is 96.",
+            "severity": "high"
+          },
+          {
+            "label": "Generic booking tool",
+            "detail": "Online booking exists but runs on a generic tool, which can feel less trustworthy to customers and may not fit a roofing job's quoting needs.",
+            "severity": "medium"
+          },
+          {
+            "label": "Complaints about follow-through",
+            "detail": "Three of the five recent reviews mention a missed estimate, a job running long, or chasing an invoice, which can cost repeat and referral work.",
+            "severity": "medium"
+          },
+          {
+            "label": "Thin social presence",
+            "detail": "Only a Facebook link appears on the site, which leaves fewer places for new customers to check the business.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Strong communication",
+          "Insurance claim help",
+          "Friendly crew",
+          "Missed estimate appointment",
+          "Invoice follow-up delays"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Your homepage is missing a mobile viewport setting, so phone visitors may see a cramped layout before they ever call.",
+        "pitch": "Apex Growth Agency builds mobile-friendly sites with online booking and grows Google reviews, so closing that gap could help you win more phone leads. Would you be open to a short call next week to see what a quick fix would look like?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Juniper Roof & Repair",
+    "placeId": "mock_043",
+    "address": "1224 Kingsbury Ave , Dallas, TX 75238",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0124",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Juniper%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.3,
+    "reviewsCount": 190,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/juniper-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Cleanup was sloppy. Found nails in the tire two weeks later.",
+        "stars": 1,
+        "publishedAtDate": "2026-02-07T08:54:00.000Z"
+      },
+      {
+        "text": "Found storm damage the other company missed. Saved us money.",
+        "stars": 5,
+        "publishedAtDate": "2026-05-03T17:13:00.000Z"
+      },
+      {
+        "text": "Left shingles and nails all over the driveway.",
+        "stars": 2,
+        "publishedAtDate": "2026-08-21T16:01:00.000Z"
+      },
+      {
+        "text": "Cleaned up every nail in the yard. Impressed.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-26T12:15:00.000Z"
+      },
+      {
+        "text": "Price was fine but the project ran a week over with no updates.",
+        "stars": 3,
+        "publishedAtDate": "2025-12-26T16:13:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Juniper Roof & Repair has no website on file, so customers searching Google for a roofer in Dallas have no site to check, book on, or call from.",
+            "severity": "high"
+          },
+          {
+            "label": "Rating trails the market",
+            "detail": "A 3.3 star rating across 190 reviews gives homeowners a reason to pick a competitor, and no site exists to show their side of the story.",
+            "severity": "medium"
+          },
+          {
+            "label": "Cleanup complaints recur",
+            "detail": "3 of the 5 reviews complain about cleanup or delays, including nails left in a customer's tire two weeks after the job, which is the kind of detail that spreads.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Sloppy job cleanup",
+          "Nails left behind",
+          "Project delays",
+          "No progress updates",
+          "Storm damage found",
+          "Clean yard praised"
+        ],
+        "complaintCount": 3,
+        "firstLine": "Juniper, with 190 Google reviews and no website, many Dallas homeowners who search for you can't book or even call you online.",
+        "pitch": "We build mobile-friendly websites with online booking and help local roofers grow their Google reviews, which could turn those searches into booked jobs. Would you be open to a short call next week to see if it makes sense for Juniper?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Brambleton Roofing Group",
+    "placeId": "mock_044",
+    "address": "8719 Pecan Hollow Way , Dallas, TX 75205",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0157",
+    "website": "https://brambleton-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Brambleton%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.5,
+    "reviewsCount": 80,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/brambleton-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [
+      "office@brambleton-roofing-group.example"
+    ],
+    "reviews": [
+      {
+        "text": "Crew showed up on time and finished in one day. Roof looks great.",
+        "stars": 5,
+        "publishedAtDate": "2026-06-09T19:11:00.000Z"
+      },
+      {
+        "text": "Waited a week for a callback just to get an estimate.",
+        "stars": 2,
+        "publishedAtDate": "2025-11-22T20:01:00.000Z"
+      },
+      {
+        "text": "Solid roof, decent price. Scheduling was a little tight.",
+        "stars": 4,
+        "publishedAtDate": "2025-12-01T12:50:00.000Z"
+      },
+      {
+        "text": "Good job overall. Took a day longer than quoted but they called ahead.",
+        "stars": 4,
+        "publishedAtDate": "2026-01-19T12:01:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Brambleton Roofing Group | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Brambleton Roofing Group</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550157\">Call us</a><a href=\"https://facebook.com/brambleton-roofing-group\">Facebook</a><footer>&copy; 2025 Brambleton Roofing Group</footer></body></html>",
+      "pagespeedMobile": 23,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile site",
+            "detail": "The homepage scored 23/100 on PageSpeed mobile, so people searching on their phones may bounce before calling or requesting a quote.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking tool, so customers who want to schedule an estimate after hours have to call and wait, which sends some of them to competitors.",
+            "severity": "high"
+          },
+          {
+            "label": "Callback delays in reviews",
+            "detail": "One recent review says it took a week for a callback just to get an estimate, which suggests leads may be going cold before the first conversation.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "on-time crew",
+          "finished in one day",
+          "fair price",
+          "tight scheduling",
+          "slow callback"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Your 4.5-star rating is strong, but your homepage loads at 23 out of 100 on phones, and that may be costing you roof estimates.",
+        "pitch": "We build mobile-friendly sites with online booking so homeowners can request an estimate at any hour without waiting on a callback. Would you be open to a short call next week to see whether that fits Brambleton Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Upland Roofing Group",
+    "placeId": "mock_045",
+    "address": "7947 Dovetail Blvd , Dallas, TX 75244",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0159",
+    "website": "https://upland-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Upland%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.9,
+    "reviewsCount": 60,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/upland-roofing-group"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Clean install and the ridge vent works well. Attic is cooler.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-24T19:58:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Upland Roofing Group | Dallas, TX</title></head><body><h1>Upland Roofing Group</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550159\">Call us</a><a href=\"/book\">Book online</a><a href=\"https://facebook.com/upland-roofing-group\">Facebook</a><footer>&copy; 2022 Upland Roofing Group</footer></body></html>",
+      "pagespeedMobile": 95,
+      "ai": {
+        "findings": [
+          {
+            "label": "No mobile viewport",
+            "detail": "The homepage has no mobile viewport tag, so phones may render the site at desktop width, which pushes away the homeowners who search on their phones.",
+            "severity": "high"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year reads 2022, which suggests the site has not been updated in a while and can make a roofer look less active.",
+            "severity": "low"
+          },
+          {
+            "label": "Thin social presence",
+            "detail": "Only a Facebook link appears on the homepage, so there are few other places for prospects to find or check the business.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "clean installation",
+          "ridge vent",
+          "attic cooling"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your homepage has no mobile viewport tag, so homeowners on phones may see a desktop layout when they search for a roofer.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses grow their Google reviews, which fits the gap you have on phones. Would you be open to a short call next week to see if it makes sense for Upland Roofing Group?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Elmhurst Shingle Works",
+    "placeId": "mock_046",
+    "address": "8382 Montrose Blvd , Dallas, TX 75207",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0199",
+    "website": "https://elmhurst-shingle-works.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Elmhurst%20Shingle%20Works",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.7,
+    "reviewsCount": 46,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/elmhurst-shingle-works"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Fixed our leak and it has stayed dry through three storms.",
+        "stars": 5,
+        "publishedAtDate": "2025-12-09T16:40:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Elmhurst Shingle Works | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Elmhurst Shingle Works</h1><p>Serving the Dallas area. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550199\">Call us</a><script src=\"https://cdn.getjobber.com/jobber.com/booking.js\"></script><a href=\"https://facebook.com/elmhurst-shingle-works\">Facebook</a><footer>&copy; 2025 Elmhurst Shingle Works</footer></body></html>",
+      "pagespeedMobile": 77,
+      "ai": {
+        "findings": [
+          {
+            "label": "Low review count",
+            "detail": "With a 3.7 rating across 46 reviews, the listing trails competitors who show more recent, higher-rated feedback, which can cost them calls from people comparing options.",
+            "severity": "medium"
+          },
+          {
+            "label": "Mobile speed could improve",
+            "detail": "PageSpeed mobile score of 77 is passable but leaves room, and slower mobile pages can lose visitors who want to book on their phone.",
+            "severity": "low"
+          }
+        ],
+        "reviewThemes": [
+          "Leak repair",
+          "Storm durability"
+        ],
+        "complaintCount": 0,
+        "firstLine": "Your Jobber booking link and click-to-call are already working well, and your 3.7 rating across 46 reviews has room to grow.",
+        "pitch": "Apex Growth Agency helps local service businesses like yours speed up mobile pages and collect more Google reviews from happy customers. Would you be open to a short call next week to see if that fits what you need?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Larkspur Roofing Co",
+    "placeId": "mock_047",
+    "address": "4276 Copperfield Ave , Dallas, TX 75244",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0177",
+    "website": "https://larkspur-roofing-co.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Larkspur%20Roofing%20Co",
+    "categoryName": "Roofing contractor",
+    "totalScore": 4.1,
+    "reviewsCount": 398,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/larkspur-roofing-co"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Crew was great, office was disorganized. Rescheduled twice.",
+        "stars": 3,
+        "publishedAtDate": "2026-05-08T13:21:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Larkspur Roofing Co | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Larkspur Roofing Co</h1><p>Free estimates. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550177\">Call us</a><script src=\"https://scheduler.servicetitan.com/embed.js\"></script><a href=\"https://instagram.com/larkspur-roofing-co\">Instagram</a><footer>&copy; 2018 Larkspur Roofing Co</footer></body></html>",
+      "pagespeedMobile": 32,
+      "ai": {
+        "findings": [
+          {
+            "label": "Slow mobile site",
+            "detail": "The homepage scores 32/100 on PageSpeed mobile, so many phone visitors may leave before the page loads and call a competitor instead.",
+            "severity": "high"
+          },
+          {
+            "label": "Dated site footer",
+            "detail": "The copyright year is 2018, which can make the business look less active to a customer comparing roofers.",
+            "severity": "low"
+          },
+          {
+            "label": "Scheduling complaints in reviews",
+            "detail": "One recent 3-star review says the office was disorganized and the job was rescheduled twice, which can cost repeat and referral work.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Crew quality praised",
+          "Disorganized office",
+          "Rescheduled appointments"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your Larkspur crew earns good reviews, but your homepage loads at 32 out of 100 on mobile phones.",
+        "pitch": "We build mobile-friendly sites with online booking and help local businesses earn more Google reviews, which could help close that gap for Larkspur. Would you be open to a short call next week to see if it makes sense?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Tanglewood Roofing Group",
+    "placeId": "mock_048",
+    "address": "3774 Pecan Hollow Dr , Dallas, TX 75236",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0116",
+    "website": "https://tanglewood-roofing-group.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Tanglewood%20Roofing%20Group",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.9,
+    "reviewsCount": 52,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/tanglewood-roofing-group"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Cleanup was sloppy. Found nails in the tire two weeks later.",
+        "stars": 1,
+        "publishedAtDate": "2026-06-18T12:42:00.000Z"
+      },
+      {
+        "text": "Good job overall. Took a day longer than quoted but they called ahead.",
+        "stars": 4,
+        "publishedAtDate": "2025-11-14T12:55:00.000Z"
+      },
+      {
+        "text": "Quick turnaround on an emergency tarp after a tree fell.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-25T13:55:00.000Z"
+      },
+      {
+        "text": "Cleaned up every nail in the yard. Impressed.",
+        "stars": 5,
+        "publishedAtDate": "2026-09-02T11:38:00.000Z"
+      },
+      {
+        "text": "Would not recommend. Never heard back after paying the deposit.",
+        "stars": 1,
+        "publishedAtDate": "2026-02-12T08:36:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Tanglewood Roofing Group | Dallas, TX</title></head><body><h1>Tanglewood Roofing Group</h1><p>Family owned. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550116\">Call us</a><a href=\"https://instagram.com/tanglewood-roofing-group\">Instagram</a><footer>&copy; 2025 Tanglewood Roofing Group</footer></body></html>",
+      "pagespeedMobile": 72,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The homepage has no online booking tool, so homeowners with a leaking roof must call or leave a form, and many will book a competitor who lets them schedule on the spot.",
+            "severity": "high"
+          },
+          {
+            "label": "Not mobile-friendly",
+            "detail": "The mobile viewport check failed, so phone visitors may get a hard-to-read page and leave before calling, and mobile PageSpeed is only 72/100.",
+            "severity": "high"
+          },
+          {
+            "label": "Post-payment silence complaint",
+            "detail": "One reviewer says they never heard back after paying a deposit, and another reports nails left in the yard, so 2 of the 5 recent reviews point to follow-through problems.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "Emergency tarp response",
+          "Cleanup quality",
+          "Poor follow-up after deposit",
+          "Calling ahead on delays"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Tanglewood, your site doesn't let a homeowner book on a phone, and two recent reviews mention follow-up problems.",
+        "pitch": "We build mobile-friendly sites with online booking and help roofing companies grow Google reviews, which could turn those gaps into booked jobs. Would you be open to a short call next week to see if it fits?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Yarrow Roof & Repair",
+    "placeId": "mock_049",
+    "address": "6666 Cedar Vale Ave , Dallas, TX 75248",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0135",
+    "website": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=Yarrow%20Roof%20%26%20Repair",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.9,
+    "reviewsCount": 418,
+    "permanentlyClosed": false,
+    "facebooks": [
+      "https://facebook.com/yarrow-roof-repair"
+    ],
+    "instagrams": [],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Clean install and the ridge vent works well. Attic is cooler.",
+        "stars": 5,
+        "publishedAtDate": "2026-08-27T18:17:00.000Z"
+      },
+      {
+        "text": "Quick turnaround on an emergency tarp after a tree fell.",
+        "stars": 5,
+        "publishedAtDate": "2025-10-06T11:44:00.000Z"
+      },
+      {
+        "text": "Fair price and the estimate matched the final bill.",
+        "stars": 5,
+        "publishedAtDate": "2026-02-11T12:00:00.000Z"
+      },
+      {
+        "text": "Good crew, but the estimate took ten days to arrive.",
+        "stars": 3,
+        "publishedAtDate": "2025-12-28T09:36:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": null,
+      "pagespeedMobile": null,
+      "ai": {
+        "findings": [
+          {
+            "label": "No website",
+            "detail": "Yarrow Roof & Repair has no website we could reach, so homeowners searching for a roofer after a storm have no page to book or call from, and likely go to competitors.",
+            "severity": "high"
+          },
+          {
+            "label": "No online booking",
+            "detail": "Without a website or booking tool, customers cannot request an estimate or schedule a repair outside phone hours, which can cost jobs to firms that offer it.",
+            "severity": "high"
+          },
+          {
+            "label": "Slow estimate turnaround",
+            "detail": "One of the four recent reviews says the estimate took ten days to arrive, a delay that can send a homeowner to a faster competitor.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "clean installation",
+          "fair pricing",
+          "estimate accuracy",
+          "slow estimate",
+          "emergency response",
+          "good crew"
+        ],
+        "complaintCount": 1,
+        "firstLine": "Your 3.9 rating over 418 reviews is strong, but homeowners searching Google can't find a site to request an estimate.",
+        "pitch": "That gap between your reviews and your online presence is exactly what Apex Growth Agency helps local roofers close with a mobile-friendly site, online booking, and review growth. Would you be open to a short call next week to see if it makes sense for Yarrow?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  },
+  {
+    "title": "Ashlar Ridge Roofing",
+    "placeId": "mock_050",
+    "address": "7359 Mulberry Bend Blvd , Dallas, TX 75239",
+    "city": "Dallas",
+    "state": "Texas",
+    "phone": "(214) 555-0100",
+    "website": "https://ashlar-ridge-roofing.example",
+    "url": "https://www.google.com/maps/search/?api=1&query=Ashlar%20Ridge%20Roofing",
+    "categoryName": "Roofing contractor",
+    "totalScore": 3.8,
+    "reviewsCount": 115,
+    "permanentlyClosed": false,
+    "facebooks": [],
+    "instagrams": [
+      "https://instagram.com/ashlar-ridge-roofing"
+    ],
+    "emails": [],
+    "reviews": [
+      {
+        "text": "Paid for a repair and the same spot leaked again a month later.",
+        "stars": 2,
+        "publishedAtDate": "2026-02-24T12:49:00.000Z"
+      },
+      {
+        "text": "Helped us with the adjuster visit and got the claim approved.",
+        "stars": 5,
+        "publishedAtDate": "2026-07-20T08:56:00.000Z"
+      },
+      {
+        "text": "Cleanup was sloppy. Found nails in the tire two weeks later.",
+        "stars": 1,
+        "publishedAtDate": "2025-10-05T09:48:00.000Z"
+      }
+    ],
+    "mock": {
+      "homepageHtml": "<html><head><title>Ashlar Ridge Roofing | Dallas, TX</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><h1>Ashlar Ridge Roofing</h1><p>Licensed and insured. Roof repair and replacement across Dallas.</p><a href=\"tel:+12145550100\">Call us</a><a href=\"https://instagram.com/ashlar-ridge-roofing\">Instagram</a><footer>&copy; 2018 Ashlar Ridge Roofing</footer></body></html>",
+      "pagespeedMobile": 79,
+      "ai": {
+        "findings": [
+          {
+            "label": "No online booking",
+            "detail": "The site has no online booking, so homeowners with a leak or storm damage must call or wait to get on the schedule, and some will book a competitor who lets them book at night.",
+            "severity": "high"
+          },
+          {
+            "label": "Outdated site footer",
+            "detail": "The homepage copyright reads 2018, which suggests the site has not been maintained and can make a roofer look less active and less trustworthy to a homeowner comparing options.",
+            "severity": "medium"
+          },
+          {
+            "label": "Two complaints about repairs",
+            "detail": "2 of the last 3 reviews complain about repair quality and cleanup, with a leak returning a month after payment and nails found in a customer's tire, which hurts a 3.8-star rating across 115 reviews.",
+            "severity": "medium"
+          }
+        ],
+        "reviewThemes": [
+          "repair quality",
+          "leak recurrence",
+          "job site cleanup",
+          "insurance claim help"
+        ],
+        "complaintCount": 2,
+        "firstLine": "Ashlar Ridge, your 3.8 rating over 115 reviews is mostly held back by repeat leak and cleanup complaints.",
+        "pitch": "We help roofing companies like yours get a mobile-friendly site with online booking and steady Google review growth, which can turn more of your local searches into booked jobs. Would you be open to a short call next week to see if that fits what you need?",
+        "aiSource": "claude-haiku-5-5 (cached)"
+      }
+    }
+  }
+]

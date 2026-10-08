@@ -1,0 +1,9 @@
+.n8n-home/
+output/*
+!output/.gitkeep
+.env
+node_modules/
+.DS_Store
+__pycache__/
+.venv/
+n8n/lead-gen-workflow.json

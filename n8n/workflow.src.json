@@ -1,0 +1,795 @@
+{
+  "name": "Lead Gen — Apex Growth",
+  "id": "apexLeadGen00001",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a0010000-0000-4000-8000-000000000000",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a0020000-0000-4000-8000-000000000000",
+              "name": "dataSource",
+              "value": "mock",
+              "type": "string"
+            },
+            {
+              "id": "a0030000-0000-4000-8000-000000000000",
+              "name": "ai",
+              "value": "mock",
+              "type": "string"
+            },
+            {
+              "id": "a0040000-0000-4000-8000-000000000000",
+              "name": "city",
+              "value": "Dallas, TX",
+              "type": "string"
+            },
+            {
+              "id": "a0050000-0000-4000-8000-000000000000",
+              "name": "searchTerm",
+              "value": "roofing contractor",
+              "type": "string"
+            },
+            {
+              "id": "a0060000-0000-4000-8000-000000000000",
+              "name": "limit",
+              "value": 50,
+              "type": "number"
+            },
+            {
+              "id": "a0070000-0000-4000-8000-000000000000",
+              "name": "model",
+              "value": "claude-haiku-5-5",
+              "type": "string"
+            },
+            {
+              "id": "a0080000-0000-4000-8000-000000000000",
+              "name": "agencyName",
+              "value": "Apex Growth Agency",
+              "type": "string"
+            },
+            {
+              "id": "a0090000-0000-4000-8000-000000000000",
+              "name": "agencyOffer",
+              "value": "mobile-friendly websites with online booking, Google review growth, and local ads",
+              "type": "string"
+            },
+            {
+              "id": "a0100000-0000-4000-8000-000000000000",
+              "name": "startedAt",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a0110000-0000-4000-8000-000000000000",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a0120000-0000-4000-8000-000000000000",
+              "leftValue": "={{ $json.dataSource }}",
+              "rightValue": "mock",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a0130000-0000-4000-8000-000000000000",
+      "name": "Data source?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "__REPO__/data/sample_roofers.json",
+        "options": {}
+      },
+      "id": "a0140000-0000-4000-8000-000000000000",
+      "name": "Read sample file",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        680,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "fromJson",
+        "options": {}
+      },
+      "id": "a0150000-0000-4000-8000-000000000000",
+      "name": "Extract JSON",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/normalize.js\n// @include src/audit.js\n\n// The sample file is one JSON array; Extract from File puts it under \"data\". One item per place comes out.\nconst cfg = $('Config').first().json;\nconst year = new Date().getFullYear();\nconst places = $input.all().flatMap((i) => (Array.isArray(i.json.data) ? i.json.data : [i.json.data || i.json]));\nreturn places.slice(0, cfg.limit).map((place) => {\n  const lead = normalizePlace(place);\n  const mock = lead.mock || {};\n  return { json: { lead, signals: auditSite(mock.homepageHtml, lead.website, mock.pagespeedMobile, year) } };\n});"
+      },
+      "id": "a0160000-0000-4000-8000-000000000000",
+      "name": "Normalize + audit (mock)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/compass~crawler-google-places/run-sync-get-dataset-items?timeout=300",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ searchStringsArray: [$json.searchTerm], locationQuery: $json.city, maxCrawledPlacesPerSearch: $json.limit, language: \"en\", scrapeContacts: true, maxReviews: 5, reviewsSort: \"newest\", skipClosedPlaces: true }) }}",
+        "options": {
+          "timeout": 330000
+        }
+      },
+      "id": "a0170000-0000-4000-8000-000000000000",
+      "name": "Apify: Google Maps",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        680,
+        520
+      ],
+      "notes": "Credential: Apify token (Header Auth, name Authorization, value Bearer <token>)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/normalize.js\n\nconst cfg = $('Config').first().json;\nreturn $input.all().slice(0, cfg.limit).map((i) => ({ json: normalizePlace(i.json) }));"
+      },
+      "id": "a0180000-0000-4000-8000-000000000000",
+      "name": "Normalize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.website }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "a0190000-0000-4000-8000-000000000000",
+      "name": "Fetch homepage",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1120,
+        520
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $('Normalize').item.json.website }}"
+            },
+            {
+              "name": "strategy",
+              "value": "mobile"
+            },
+            {
+              "name": "category",
+              "value": "performance"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 90000,
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 0
+            }
+          }
+        }
+      },
+      "id": "a0200000-0000-4000-8000-000000000000",
+      "name": "PageSpeed",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1340,
+        520
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credential: PageSpeed key (Query Auth, name key, value <API key>)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/audit.js\n\n// Fetch homepage and PageSpeed keep the item order, so item i matches Normalize item i.\nconst leads = $('Normalize').all();\nconst pages = $('Fetch homepage').all();\nconst speeds = $input.all();\nconst year = new Date().getFullYear();\nreturn leads.map((item, i) => {\n  const lead = item.json;\n  const html = pages[i] && pages[i].json.data;\n  const score = speeds[i] && speeds[i].json.lighthouseResult?.categories?.performance?.score;\n  const pagespeed = typeof score === \"number\" ? Math.round(score * 100) : null;\n  return { json: { lead, signals: auditSite(typeof html === \"string\" ? html : null, lead.website, pagespeed, year) } };\n});"
+      },
+      "id": "a0210000-0000-4000-8000-000000000000",
+      "name": "Audit",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a0220000-0000-4000-8000-000000000000",
+              "leftValue": "={{ $('Config').first().json.ai }}",
+              "rightValue": "claude",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a0230000-0000-4000-8000-000000000000",
+      "name": "AI?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1800,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/prompt.js\n\nconst cfg = $('Config').first().json;\nreturn $input.all().map((i) => ({\n  json: { ...i.json, request: buildClaudeRequest(i.json.lead, i.json.signals, cfg) },\n}));"
+      },
+      "id": "a0240000-0000-4000-8000-000000000000",
+      "name": "Build Claude request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 120000,
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "a0250000-0000-4000-8000-000000000000",
+      "name": "Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        2260,
+        100
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credential: Anthropic key (Anthropic account credential)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/prompt.js\n// @include src/mock_ai.js\n\n// Claude keeps the item order, so reply i belongs to request i. A failed call falls back to the template.\nconst cfg = $('Config').first().json;\nconst sent = $('Build Claude request').all();\nreturn $input.all().map((reply, i) => {\n  const { lead, signals } = sent[i].json;\n  const parsed = parseClaudeResponse(reply.json);\n  const ai = parsed.ai || { ...mockAi(lead, signals, cfg), aiSource: \"template (fallback)\" };\n  return { json: { lead, signals, ai, usage: parsed.usage } };\n});"
+      },
+      "id": "a0260000-0000-4000-8000-000000000000",
+      "name": "Parse Claude",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2480,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/mock_ai.js\n\nconst cfg = $('Config').first().json;\nreturn $input.all().map((i) => ({\n  json: { lead: i.json.lead, signals: i.json.signals, ai: mockAi(i.json.lead, i.json.signals, cfg), usage: { inputTokens: 0, outputTokens: 0 } },\n}));"
+      },
+      "id": "a0270000-0000-4000-8000-000000000000",
+      "name": "Mock AI",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/score.js\n\nconst year = new Date().getFullYear();\nreturn $input.all().map((i) => {\n  const { lead, signals, ai, usage } = i.json;\n  const { score, tier, scoreReasons } = scoreLead(lead, signals, ai, year);\n  return { json: { ...lead, signals, ...ai, usage, score, tier, scoreReasons } };\n});"
+      },
+      "id": "a0280000-0000-4000-8000-000000000000",
+      "name": "Score",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// @include src/output.js\n\nconst cfg = $('Config').first().json;\nconst { json, csv } = buildOutput($input.all().map((i) => i.json), {\n  agency: cfg.agencyName,\n  niche: cfg.searchTerm,\n  city: cfg.city,\n  dataSource: cfg.dataSource,\n  ai: cfg.ai,\n  model: cfg.model,\n  generatedAt: new Date().toISOString(),\n  durationSeconds: (Date.now() - new Date(cfg.startedAt).getTime()) / 1000,\n});\nreturn [{ json: { jsonText: JSON.stringify(json, null, 2) + \"\\n\", csv } }];"
+      },
+      "id": "a0290000-0000-4000-8000-000000000000",
+      "name": "Build output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2940,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "jsonText",
+        "options": {
+          "fileName": "leads.json"
+        }
+      },
+      "id": "a0300000-0000-4000-8000-000000000000",
+      "name": "Make leads.json",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3160,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "__REPO__/output/leads.json",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a0310000-0000-4000-8000-000000000000",
+      "name": "Write leads.json",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        3380,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "csv",
+        "options": {
+          "fileName": "leads.csv"
+        }
+      },
+      "id": "a0320000-0000-4000-8000-000000000000",
+      "name": "Make leads.csv",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3160,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "__REPO__/output/leads.csv",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a0330000-0000-4000-8000-000000000000",
+      "name": "Write leads.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        3380,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 1 Find roofers\nPulls Google Maps listings for the search term and city. In **mock** mode this reads a saved sample of 50 Dallas roofers, so the demo runs offline. In **apify** mode it calls the Apify Google Maps scraper.",
+        "width": 700,
+        "height": 220,
+        "color": 4
+      },
+      "id": "a0340000-0000-4000-8000-000000000000",
+      "name": "Note 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        640,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2 Audit website + speed\nFetches each homepage and checks it: loads? mobile-friendly? online booking? click-to-call? Then asks Google PageSpeed for the mobile speed score.",
+        "width": 700,
+        "height": 220,
+        "color": 5
+      },
+      "id": "a0350000-0000-4000-8000-000000000000",
+      "name": "Note 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1090,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3 Claude audit + opener\nClaude reads the facts and recent reviews, then writes the findings, a one-line cold-email opener and a short pitch. Mock mode uses a template instead.",
+        "width": 700,
+        "height": 220,
+        "color": 6
+      },
+      "id": "a0360000-0000-4000-8000-000000000000",
+      "name": "Note 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 4 Score, rank, export\nEach lead gets a 0-100 opportunity score (hot / warm / cold), the list is ranked, and leads.json and leads.csv are written to the output folder.",
+        "width": 700,
+        "height": 220,
+        "color": 7
+      },
+      "id": "a0370000-0000-4000-8000-000000000000",
+      "name": "Note 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2680,
+        560
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Data source?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data source?": {
+      "main": [
+        [
+          {
+            "node": "Read sample file",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Apify: Google Maps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read sample file": {
+      "main": [
+        [
+          {
+            "node": "Extract JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract JSON": {
+      "main": [
+        [
+          {
+            "node": "Normalize + audit (mock)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apify: Google Maps": {
+      "main": [
+        [
+          {
+            "node": "Normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize": {
+      "main": [
+        [
+          {
+            "node": "Fetch homepage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch homepage": {
+      "main": [
+        [
+          {
+            "node": "PageSpeed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PageSpeed": {
+      "main": [
+        [
+          {
+            "node": "Audit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize + audit (mock)": {
+      "main": [
+        [
+          {
+            "node": "AI?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audit": {
+      "main": [
+        [
+          {
+            "node": "AI?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI?": {
+      "main": [
+        [
+          {
+            "node": "Build Claude request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mock AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Claude request": {
+      "main": [
+        [
+          {
+            "node": "Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude": {
+      "main": [
+        [
+          {
+            "node": "Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock AI": {
+      "main": [
+        [
+          {
+            "node": "Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score": {
+      "main": [
+        [
+          {
+            "node": "Build output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build output": {
+      "main": [
+        [
+          {
+            "node": "Make leads.json",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Make leads.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make leads.json": {
+      "main": [
+        [
+          {
+            "node": "Write leads.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make leads.csv": {
+      "main": [
+        [
+          {
+            "node": "Write leads.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

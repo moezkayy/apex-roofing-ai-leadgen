@@ -1,0 +1,795 @@
+{
+  "name": "Lead Gen — Apex Growth",
+  "id": "apexLeadGen00001",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a0010000-0000-4000-8000-000000000000",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a0020000-0000-4000-8000-000000000000",
+              "name": "dataSource",
+              "value": "mock",
+              "type": "string"
+            },
+            {
+              "id": "a0030000-0000-4000-8000-000000000000",
+              "name": "ai",
+              "value": "mock",
+              "type": "string"
+            },
+            {
+              "id": "a0040000-0000-4000-8000-000000000000",
+              "name": "city",
+              "value": "Dallas, TX",
+              "type": "string"
+            },
+            {
+              "id": "a0050000-0000-4000-8000-000000000000",
+              "name": "searchTerm",
+              "value": "roofing contractor",
+              "type": "string"
+            },
+            {
+              "id": "a0060000-0000-4000-8000-000000000000",
+              "name": "limit",
+              "value": 50,
+              "type": "number"
+            },
+            {
+              "id": "a0070000-0000-4000-8000-000000000000",
+              "name": "model",
+              "value": "claude-haiku-5-5",
+              "type": "string"
+            },
+            {
+              "id": "a0080000-0000-4000-8000-000000000000",
+              "name": "agencyName",
+              "value": "Apex Growth Agency",
+              "type": "string"
+            },
+            {
+              "id": "a0090000-0000-4000-8000-000000000000",
+              "name": "agencyOffer",
+              "value": "mobile-friendly websites with online booking, Google review growth, and local ads",
+              "type": "string"
+            },
+            {
+              "id": "a0100000-0000-4000-8000-000000000000",
+              "name": "startedAt",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a0110000-0000-4000-8000-000000000000",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a0120000-0000-4000-8000-000000000000",
+              "leftValue": "={{ $json.dataSource }}",
+              "rightValue": "mock",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a0130000-0000-4000-8000-000000000000",
+      "name": "Data source?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "__REPO__/data/sample_roofers.json",
+        "options": {}
+      },
+      "id": "a0140000-0000-4000-8000-000000000000",
+      "name": "Read sample file",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        680,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "fromJson",
+        "options": {}
+      },
+      "id": "a0150000-0000-4000-8000-000000000000",
+      "name": "Extract JSON",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Turns one Apify Google Maps Scraper item into a Lead.\n// Missing values become null, missing lists become [].\n\nconst MAX_REVIEWS = 5;\n\nfunction cleanText(value) {\n  if (value == null) return null;\n  if (typeof value !== \"string\") return value;\n  const trimmed = value.trim();\n  return trimmed === \"\" ? null : trimmed;\n}\n\nfunction numberOrNull(value) {\n  return typeof value === \"number\" && Number.isFinite(value) ? value : null;\n}\n\nfunction firstText(list) {\n  return Array.isArray(list) ? cleanText(list.find((v) => cleanText(v) != null)) : null;\n}\n\n// Newest first; undated reviews go last. Empty texts are dropped.\nfunction newestReviews(reviews) {\n  if (!Array.isArray(reviews)) return [];\n  return reviews\n    .map((r) => ({\n      text: cleanText(r && r.text),\n      stars: numberOrNull(r && r.stars),\n      date: cleanText(r && r.publishedAtDate),\n    }))\n    .filter((r) => typeof r.text === \"string\")\n    .sort((a, b) => (b.date || \"\").localeCompare(a.date || \"\"))\n    .slice(0, MAX_REVIEWS);\n}\n\nfunction normalizePlace(item) {\n  return {\n    placeId: cleanText(item.placeId),\n    name: cleanText(item.title),\n    address: cleanText(item.address),\n    phone: cleanText(item.phone),\n    website: cleanText(item.website),\n    mapsUrl: cleanText(item.url),\n    rating: numberOrNull(item.totalScore),\n    reviewCount: numberOrNull(item.reviewsCount),\n    category: cleanText(item.categoryName),\n    permanentlyClosed: typeof item.permanentlyClosed === \"boolean\" ? item.permanentlyClosed : null,\n    socials: {\n      facebook: firstText(item.facebooks),\n      instagram: firstText(item.instagrams),\n    },\n    email: firstText(item.emails),\n    reviews: newestReviews(item.reviews),\n    mock: item.mock || null,\n  };\n}\n// Reads a homepage's HTML and returns Signals.\n// No HTML means we couldn't look, so every HTML-based signal is null (unknown), not false.\n\nconst BOOKING_TOOLS = [\n  [/calendly\\.com/i, \"Calendly\"],\n  [/housecallpro\\.com/i, \"Housecall Pro\"],\n  [/jobber\\.com/i, \"Jobber\"],\n  [/servicetitan\\.com/i, \"ServiceTitan\"],\n  [/acuityscheduling\\.com/i, \"Acuity Scheduling\"],\n  [/squareup\\.com\\/appointments/i, \"Square Appointments\"],\n];\nconst BOOKING_TEXT = /book online|schedule (an )?(estimate|inspection|appointment)|request (a )?quote online/i;\nconst SOCIAL_URL = /https?:\\/\\/(?:www\\.|m\\.)?(facebook|instagram|youtube|tiktok|linkedin|x|twitter)\\.com\\b/gi;\n\nfunction findBookingTool(html) {\n  for (const [pattern, name] of BOOKING_TOOLS) {\n    if (pattern.test(html)) return name;\n  }\n  // Only link or button text counts, so \"call to schedule an estimate\" in a paragraph doesn't.\n  for (const match of html.matchAll(/<(a|button)\\b[^>]*>([\\s\\S]*?)<\\/\\1>/gi)) {\n    const text = match[2].replace(/<[^>]*>/g, \" \").replace(/\\s+/g, \" \");\n    if (BOOKING_TEXT.test(text)) return \"generic\";\n  }\n  return null;\n}\n\nfunction findSocialHosts(html) {\n  const hosts = [];\n  for (const match of html.matchAll(SOCIAL_URL)) {\n    const host = match[1].toLowerCase() + \".com\";\n    if (!hosts.includes(host)) hosts.push(host);\n  }\n  return hosts;\n}\n\n// Largest plausible year within a few characters after © or \"copyright\".\nfunction findCopyrightYear(html, nowYear) {\n  const text = html.replace(/&copy;|&#169;|&#xa9;/gi, \"©\");\n  let best = null;\n  for (const match of text.matchAll(/(?:©|copyright)([^<]{0,30})/gi)) {\n    for (const yearText of match[1].match(/\\b\\d{4}\\b/g) || []) {\n      const year = Number(yearText);\n      if (year >= 2000 && year <= nowYear && (best === null || year > best)) best = year;\n    }\n  }\n  return best;\n}\n\nfunction auditSite(html, websiteUrl, pagespeedMobile, nowYear) {\n  const hasHtml = typeof html === \"string\" && html.length > 0;\n  const bookingTool = hasHtml ? findBookingTool(html) : null;\n  return {\n    hasWebsite: !!websiteUrl,\n    siteReachable: hasHtml,\n    https: websiteUrl ? /^https:\\/\\//i.test(websiteUrl) : null,\n    mobileViewport: hasHtml ? /<meta\\b[^>]*name\\s*=\\s*[\"']?viewport/i.test(html) : null,\n    onlineBooking: hasHtml ? bookingTool !== null : null,\n    bookingTool,\n    clickToCall: hasHtml ? /href\\s*=\\s*[\"']?tel:/i.test(html) : null,\n    socialLinks: hasHtml ? findSocialHosts(html) : null,\n    copyrightYear: hasHtml ? findCopyrightYear(html, nowYear) : null,\n    pagespeedMobile:\n      typeof pagespeedMobile === \"number\" && Number.isFinite(pagespeedMobile) ? Math.round(pagespeedMobile) : null,\n  };\n}\n\n// The sample file is one JSON array; Extract from File puts it under \"data\". One item per place comes out.\nconst cfg = $('Config').first().json;\nconst year = new Date().getFullYear();\nconst places = $input.all().flatMap((i) => (Array.isArray(i.json.data) ? i.json.data : [i.json.data || i.json]));\nreturn places.slice(0, cfg.limit).map((place) => {\n  const lead = normalizePlace(place);\n  const mock = lead.mock || {};\n  return { json: { lead, signals: auditSite(mock.homepageHtml, lead.website, mock.pagespeedMobile, year) } };\n});"
+      },
+      "id": "a0160000-0000-4000-8000-000000000000",
+      "name": "Normalize + audit (mock)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/compass~crawler-google-places/run-sync-get-dataset-items?timeout=300",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ searchStringsArray: [$json.searchTerm], locationQuery: $json.city, maxCrawledPlacesPerSearch: $json.limit, language: \"en\", scrapeContacts: true, maxReviews: 5, reviewsSort: \"newest\", skipClosedPlaces: true }) }}",
+        "options": {
+          "timeout": 330000
+        }
+      },
+      "id": "a0170000-0000-4000-8000-000000000000",
+      "name": "Apify: Google Maps",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        680,
+        520
+      ],
+      "notes": "Credential: Apify token (Header Auth, name Authorization, value Bearer <token>)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Turns one Apify Google Maps Scraper item into a Lead.\n// Missing values become null, missing lists become [].\n\nconst MAX_REVIEWS = 5;\n\nfunction cleanText(value) {\n  if (value == null) return null;\n  if (typeof value !== \"string\") return value;\n  const trimmed = value.trim();\n  return trimmed === \"\" ? null : trimmed;\n}\n\nfunction numberOrNull(value) {\n  return typeof value === \"number\" && Number.isFinite(value) ? value : null;\n}\n\nfunction firstText(list) {\n  return Array.isArray(list) ? cleanText(list.find((v) => cleanText(v) != null)) : null;\n}\n\n// Newest first; undated reviews go last. Empty texts are dropped.\nfunction newestReviews(reviews) {\n  if (!Array.isArray(reviews)) return [];\n  return reviews\n    .map((r) => ({\n      text: cleanText(r && r.text),\n      stars: numberOrNull(r && r.stars),\n      date: cleanText(r && r.publishedAtDate),\n    }))\n    .filter((r) => typeof r.text === \"string\")\n    .sort((a, b) => (b.date || \"\").localeCompare(a.date || \"\"))\n    .slice(0, MAX_REVIEWS);\n}\n\nfunction normalizePlace(item) {\n  return {\n    placeId: cleanText(item.placeId),\n    name: cleanText(item.title),\n    address: cleanText(item.address),\n    phone: cleanText(item.phone),\n    website: cleanText(item.website),\n    mapsUrl: cleanText(item.url),\n    rating: numberOrNull(item.totalScore),\n    reviewCount: numberOrNull(item.reviewsCount),\n    category: cleanText(item.categoryName),\n    permanentlyClosed: typeof item.permanentlyClosed === \"boolean\" ? item.permanentlyClosed : null,\n    socials: {\n      facebook: firstText(item.facebooks),\n      instagram: firstText(item.instagrams),\n    },\n    email: firstText(item.emails),\n    reviews: newestReviews(item.reviews),\n    mock: item.mock || null,\n  };\n}\n\nconst cfg = $('Config').first().json;\nreturn $input.all().slice(0, cfg.limit).map((i) => ({ json: normalizePlace(i.json) }));"
+      },
+      "id": "a0180000-0000-4000-8000-000000000000",
+      "name": "Normalize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.website }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "a0190000-0000-4000-8000-000000000000",
+      "name": "Fetch homepage",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1120,
+        520
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $('Normalize').item.json.website }}"
+            },
+            {
+              "name": "strategy",
+              "value": "mobile"
+            },
+            {
+              "name": "category",
+              "value": "performance"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 90000,
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 0
+            }
+          }
+        }
+      },
+      "id": "a0200000-0000-4000-8000-000000000000",
+      "name": "PageSpeed",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1340,
+        520
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credential: PageSpeed key (Query Auth, name key, value <API key>)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Reads a homepage's HTML and returns Signals.\n// No HTML means we couldn't look, so every HTML-based signal is null (unknown), not false.\n\nconst BOOKING_TOOLS = [\n  [/calendly\\.com/i, \"Calendly\"],\n  [/housecallpro\\.com/i, \"Housecall Pro\"],\n  [/jobber\\.com/i, \"Jobber\"],\n  [/servicetitan\\.com/i, \"ServiceTitan\"],\n  [/acuityscheduling\\.com/i, \"Acuity Scheduling\"],\n  [/squareup\\.com\\/appointments/i, \"Square Appointments\"],\n];\nconst BOOKING_TEXT = /book online|schedule (an )?(estimate|inspection|appointment)|request (a )?quote online/i;\nconst SOCIAL_URL = /https?:\\/\\/(?:www\\.|m\\.)?(facebook|instagram|youtube|tiktok|linkedin|x|twitter)\\.com\\b/gi;\n\nfunction findBookingTool(html) {\n  for (const [pattern, name] of BOOKING_TOOLS) {\n    if (pattern.test(html)) return name;\n  }\n  // Only link or button text counts, so \"call to schedule an estimate\" in a paragraph doesn't.\n  for (const match of html.matchAll(/<(a|button)\\b[^>]*>([\\s\\S]*?)<\\/\\1>/gi)) {\n    const text = match[2].replace(/<[^>]*>/g, \" \").replace(/\\s+/g, \" \");\n    if (BOOKING_TEXT.test(text)) return \"generic\";\n  }\n  return null;\n}\n\nfunction findSocialHosts(html) {\n  const hosts = [];\n  for (const match of html.matchAll(SOCIAL_URL)) {\n    const host = match[1].toLowerCase() + \".com\";\n    if (!hosts.includes(host)) hosts.push(host);\n  }\n  return hosts;\n}\n\n// Largest plausible year within a few characters after © or \"copyright\".\nfunction findCopyrightYear(html, nowYear) {\n  const text = html.replace(/&copy;|&#169;|&#xa9;/gi, \"©\");\n  let best = null;\n  for (const match of text.matchAll(/(?:©|copyright)([^<]{0,30})/gi)) {\n    for (const yearText of match[1].match(/\\b\\d{4}\\b/g) || []) {\n      const year = Number(yearText);\n      if (year >= 2000 && year <= nowYear && (best === null || year > best)) best = year;\n    }\n  }\n  return best;\n}\n\nfunction auditSite(html, websiteUrl, pagespeedMobile, nowYear) {\n  const hasHtml = typeof html === \"string\" && html.length > 0;\n  const bookingTool = hasHtml ? findBookingTool(html) : null;\n  return {\n    hasWebsite: !!websiteUrl,\n    siteReachable: hasHtml,\n    https: websiteUrl ? /^https:\\/\\//i.test(websiteUrl) : null,\n    mobileViewport: hasHtml ? /<meta\\b[^>]*name\\s*=\\s*[\"']?viewport/i.test(html) : null,\n    onlineBooking: hasHtml ? bookingTool !== null : null,\n    bookingTool,\n    clickToCall: hasHtml ? /href\\s*=\\s*[\"']?tel:/i.test(html) : null,\n    socialLinks: hasHtml ? findSocialHosts(html) : null,\n    copyrightYear: hasHtml ? findCopyrightYear(html, nowYear) : null,\n    pagespeedMobile:\n      typeof pagespeedMobile === \"number\" && Number.isFinite(pagespeedMobile) ? Math.round(pagespeedMobile) : null,\n  };\n}\n\n// Fetch homepage and PageSpeed keep the item order, so item i matches Normalize item i.\nconst leads = $('Normalize').all();\nconst pages = $('Fetch homepage').all();\nconst speeds = $input.all();\nconst year = new Date().getFullYear();\nreturn leads.map((item, i) => {\n  const lead = item.json;\n  const html = pages[i] && pages[i].json.data;\n  const score = speeds[i] && speeds[i].json.lighthouseResult?.categories?.performance?.score;\n  const pagespeed = typeof score === \"number\" ? Math.round(score * 100) : null;\n  return { json: { lead, signals: auditSite(typeof html === \"string\" ? html : null, lead.website, pagespeed, year) } };\n});"
+      },
+      "id": "a0210000-0000-4000-8000-000000000000",
+      "name": "Audit",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a0220000-0000-4000-8000-000000000000",
+              "leftValue": "={{ $('Config').first().json.ai }}",
+              "rightValue": "claude",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a0230000-0000-4000-8000-000000000000",
+      "name": "AI?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1800,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Builds the Claude Messages API request for one lead and parses the reply into Ai.\n// n8n sends the body with an HTTP Request node; headers and the API key live there.\n\nconst prompt_DEFAULT_MODEL = \"claude-haiku-5-5\";\nconst prompt_MAX_REVIEWS = 5;\nconst prompt_MAX_REVIEW_CHARS = 300;\nconst prompt_SIGNAL_KEYS = [\n  \"hasWebsite\", \"siteReachable\", \"https\", \"mobileViewport\", \"onlineBooking\",\n  \"bookingTool\", \"clickToCall\", \"socialLinks\", \"copyrightYear\", \"pagespeedMobile\",\n];\nconst prompt_SEVERITIES = [\"high\", \"medium\", \"low\"];\n\n// Limits (2-4 findings, word counts) are in the prompt: structured outputs don't support min/max keywords.\nconst AI_SCHEMA = {\n  type: \"object\",\n  properties: {\n    findings: {\n      type: \"array\",\n      items: {\n        type: \"object\",\n        properties: {\n          label: { type: \"string\" },\n          detail: { type: \"string\" },\n          severity: { type: \"string\", enum: prompt_SEVERITIES },\n        },\n        required: [\"label\", \"detail\", \"severity\"],\n        additionalProperties: false,\n      },\n    },\n    reviewThemes: { type: \"array\", items: { type: \"string\" } },\n    complaintCount: { type: \"integer\" },\n    firstLine: { type: \"string\" },\n    pitch: { type: \"string\" },\n  },\n  required: [\"findings\", \"reviewThemes\", \"complaintCount\", \"firstLine\", \"pitch\"],\n  additionalProperties: false,\n};\n\nfunction prompt_systemPrompt(config) {\n  const agency = config.agencyName || \"our agency\";\n  const offer = config.agencyOffer || \"marketing services\";\n  const where = config.city ? ` in ${config.city}` : \"\";\n  return `You are a senior local-marketing analyst at ${agency}, which offers ${offer}. You review one local business${where} at a time and write the notes a salesperson uses for a first cold email.\n\nUse ONLY the facts in the user message. They come from the business's Google Maps listing, an automated check of its homepage, and its most recent reviews. A null value means we could not check, so never claim it either way. Never invent numbers, names, prices, awards, or outcomes.\n\nReturn:\n\nfindings: 2 to 4 items, the most commercially important first. Each one must point to a specific fact, for example \"PageSpeed mobile 31/100\", \"no online booking\", or \"2 of the last 5 reviews mention slow callbacks\". label is a short name (2 to 5 words). detail is one sentence stating the fact and why it costs the business jobs. severity is \"high\" if it likely loses customers today, \"medium\" if it weakens trust or search ranking, \"low\" if it is polish. If hasWebsite is false, \"no website\" is the first finding and is high.\n\nreviewThemes: short themes (2 to 4 words each) that come up in the given reviews, good or bad. Empty list if there are no reviews.\n\ncomplaintCount: how many of the given reviews complain about something. 0 if there are no reviews.\n\nfirstLine: one cold-email opening sentence, 25 words or fewer. It mentions ONE concrete fact from the findings, sounds like a real person wrote it, and talks to the owner directly. No flattery, no clichés such as \"I came across\" or \"I hope this finds you well\", no exclamation marks.\n\npitch: exactly 2 sentences, 60 words or fewer in total. The first connects the gap from firstLine to what ${agency} offers. The second is a soft, low-pressure call to action, such as asking if they are open to a short call. No guarantees, no statistics, no invented results.\n\nWrite in plain American English.`;\n}\n\nfunction prompt_facts(lead, signals) {\n  const s = signals || {};\n  const reviews = Array.isArray(lead.reviews) ? lead.reviews : [];\n  const facts = {\n    name: lead.name ?? null,\n    rating: lead.rating ?? null,\n    reviewCount: lead.reviewCount ?? null,\n    website: lead.website ?? null,\n    signals: Object.fromEntries(prompt_SIGNAL_KEYS.map((key) => [key, s[key] ?? null])),\n    reviews: reviews.slice(0, prompt_MAX_REVIEWS).map((r) => ({\n      text: typeof r.text === \"string\" ? r.text.slice(0, prompt_MAX_REVIEW_CHARS) : null,\n      stars: r.stars ?? null,\n      date: r.date ?? null,\n    })),\n  };\n  return `Facts about this business (JSON):\\n${JSON.stringify(facts)}`;\n}\n\nfunction buildClaudeRequest(lead, signals, config) {\n  const cfg = config || {};\n  return {\n    model: cfg.model || prompt_DEFAULT_MODEL,\n    max_tokens: 1500,\n    system: prompt_systemPrompt(cfg),\n    messages: [{ role: \"user\", content: prompt_facts(lead || {}, signals) }],\n    output_config: { effort: \"low\", format: { type: \"json_schema\", schema: AI_SCHEMA } },\n  };\n}\n\n// Returns an error message, or null if the object matches AI_SCHEMA.\nfunction prompt_shapeError(ai) {\n  if (!ai || typeof ai !== \"object\" || Array.isArray(ai)) return \"reply is not an object\";\n  if (!Array.isArray(ai.findings)) return \"findings is not a list\";\n  for (const f of ai.findings) {\n    if (!f || typeof f.label !== \"string\" || typeof f.detail !== \"string\") return \"finding needs label and detail\";\n    if (!prompt_SEVERITIES.includes(f.severity)) return `bad severity: ${f.severity}`;\n  }\n  if (!Array.isArray(ai.reviewThemes) || !ai.reviewThemes.every((t) => typeof t === \"string\")) return \"reviewThemes is not a list of strings\";\n  if (!Number.isInteger(ai.complaintCount) || ai.complaintCount < 0) return \"complaintCount is not a whole number\";\n  if (typeof ai.firstLine !== \"string\" || !ai.firstLine.trim()) return \"missing firstLine\";\n  if (typeof ai.pitch !== \"string\" || !ai.pitch.trim()) return \"missing pitch\";\n  return null;\n}\n\nfunction parseClaudeResponse(resp) {\n  const usage = {\n    inputTokens: (resp && resp.usage && resp.usage.input_tokens) || 0,\n    outputTokens: (resp && resp.usage && resp.usage.output_tokens) || 0,\n  };\n  const fail = (error) => ({ ai: null, usage, error });\n\n  if (!resp || typeof resp !== \"object\") return fail(\"no response\");\n  if (resp.type === \"error\" || resp.error) return fail(`API error: ${(resp.error && resp.error.message) || \"unknown\"}`);\n  if (resp.stop_reason === \"refusal\") return fail(\"Claude refused this request\");\n  if (resp.stop_reason === \"max_tokens\") return fail(\"reply cut off at max_tokens\");\n\n  const block = (resp.content || []).find((b) => b && b.type === \"text\");\n  if (!block) return fail(\"no text block in reply\");\n\n  let parsed;\n  try {\n    parsed = JSON.parse(block.text);\n  } catch (e) {\n    return fail(\"reply is not valid JSON\");\n  }\n  const shapeError = prompt_shapeError(parsed);\n  if (shapeError) return fail(shapeError);\n\n  const ai = {\n    findings: parsed.findings.map((f) => ({ label: f.label, detail: f.detail, severity: f.severity })),\n    reviewThemes: parsed.reviewThemes,\n    complaintCount: parsed.complaintCount,\n    firstLine: parsed.firstLine,\n    pitch: parsed.pitch,\n    aiSource: resp.model || \"claude\",\n  };\n  return { ai, usage, error: null };\n}\n\nconst cfg = $('Config').first().json;\nreturn $input.all().map((i) => ({\n  json: { ...i.json, request: buildClaudeRequest(i.json.lead, i.json.signals, cfg) },\n}));"
+      },
+      "id": "a0240000-0000-4000-8000-000000000000",
+      "name": "Build Claude request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 120000,
+          "batching": {
+            "batch": {
+              "batchSize": 5,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "a0250000-0000-4000-8000-000000000000",
+      "name": "Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        2260,
+        100
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Credential: Anthropic key (Anthropic account credential)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Builds the Claude Messages API request for one lead and parses the reply into Ai.\n// n8n sends the body with an HTTP Request node; headers and the API key live there.\n\nconst prompt_DEFAULT_MODEL = \"claude-haiku-5-5\";\nconst prompt_MAX_REVIEWS = 5;\nconst prompt_MAX_REVIEW_CHARS = 300;\nconst prompt_SIGNAL_KEYS = [\n  \"hasWebsite\", \"siteReachable\", \"https\", \"mobileViewport\", \"onlineBooking\",\n  \"bookingTool\", \"clickToCall\", \"socialLinks\", \"copyrightYear\", \"pagespeedMobile\",\n];\nconst prompt_SEVERITIES = [\"high\", \"medium\", \"low\"];\n\n// Limits (2-4 findings, word counts) are in the prompt: structured outputs don't support min/max keywords.\nconst AI_SCHEMA = {\n  type: \"object\",\n  properties: {\n    findings: {\n      type: \"array\",\n      items: {\n        type: \"object\",\n        properties: {\n          label: { type: \"string\" },\n          detail: { type: \"string\" },\n          severity: { type: \"string\", enum: prompt_SEVERITIES },\n        },\n        required: [\"label\", \"detail\", \"severity\"],\n        additionalProperties: false,\n      },\n    },\n    reviewThemes: { type: \"array\", items: { type: \"string\" } },\n    complaintCount: { type: \"integer\" },\n    firstLine: { type: \"string\" },\n    pitch: { type: \"string\" },\n  },\n  required: [\"findings\", \"reviewThemes\", \"complaintCount\", \"firstLine\", \"pitch\"],\n  additionalProperties: false,\n};\n\nfunction prompt_systemPrompt(config) {\n  const agency = config.agencyName || \"our agency\";\n  const offer = config.agencyOffer || \"marketing services\";\n  const where = config.city ? ` in ${config.city}` : \"\";\n  return `You are a senior local-marketing analyst at ${agency}, which offers ${offer}. You review one local business${where} at a time and write the notes a salesperson uses for a first cold email.\n\nUse ONLY the facts in the user message. They come from the business's Google Maps listing, an automated check of its homepage, and its most recent reviews. A null value means we could not check, so never claim it either way. Never invent numbers, names, prices, awards, or outcomes.\n\nReturn:\n\nfindings: 2 to 4 items, the most commercially important first. Each one must point to a specific fact, for example \"PageSpeed mobile 31/100\", \"no online booking\", or \"2 of the last 5 reviews mention slow callbacks\". label is a short name (2 to 5 words). detail is one sentence stating the fact and why it costs the business jobs. severity is \"high\" if it likely loses customers today, \"medium\" if it weakens trust or search ranking, \"low\" if it is polish. If hasWebsite is false, \"no website\" is the first finding and is high.\n\nreviewThemes: short themes (2 to 4 words each) that come up in the given reviews, good or bad. Empty list if there are no reviews.\n\ncomplaintCount: how many of the given reviews complain about something. 0 if there are no reviews.\n\nfirstLine: one cold-email opening sentence, 25 words or fewer. It mentions ONE concrete fact from the findings, sounds like a real person wrote it, and talks to the owner directly. No flattery, no clichés such as \"I came across\" or \"I hope this finds you well\", no exclamation marks.\n\npitch: exactly 2 sentences, 60 words or fewer in total. The first connects the gap from firstLine to what ${agency} offers. The second is a soft, low-pressure call to action, such as asking if they are open to a short call. No guarantees, no statistics, no invented results.\n\nWrite in plain American English.`;\n}\n\nfunction prompt_facts(lead, signals) {\n  const s = signals || {};\n  const reviews = Array.isArray(lead.reviews) ? lead.reviews : [];\n  const facts = {\n    name: lead.name ?? null,\n    rating: lead.rating ?? null,\n    reviewCount: lead.reviewCount ?? null,\n    website: lead.website ?? null,\n    signals: Object.fromEntries(prompt_SIGNAL_KEYS.map((key) => [key, s[key] ?? null])),\n    reviews: reviews.slice(0, prompt_MAX_REVIEWS).map((r) => ({\n      text: typeof r.text === \"string\" ? r.text.slice(0, prompt_MAX_REVIEW_CHARS) : null,\n      stars: r.stars ?? null,\n      date: r.date ?? null,\n    })),\n  };\n  return `Facts about this business (JSON):\\n${JSON.stringify(facts)}`;\n}\n\nfunction buildClaudeRequest(lead, signals, config) {\n  const cfg = config || {};\n  return {\n    model: cfg.model || prompt_DEFAULT_MODEL,\n    max_tokens: 1500,\n    system: prompt_systemPrompt(cfg),\n    messages: [{ role: \"user\", content: prompt_facts(lead || {}, signals) }],\n    output_config: { effort: \"low\", format: { type: \"json_schema\", schema: AI_SCHEMA } },\n  };\n}\n\n// Returns an error message, or null if the object matches AI_SCHEMA.\nfunction prompt_shapeError(ai) {\n  if (!ai || typeof ai !== \"object\" || Array.isArray(ai)) return \"reply is not an object\";\n  if (!Array.isArray(ai.findings)) return \"findings is not a list\";\n  for (const f of ai.findings) {\n    if (!f || typeof f.label !== \"string\" || typeof f.detail !== \"string\") return \"finding needs label and detail\";\n    if (!prompt_SEVERITIES.includes(f.severity)) return `bad severity: ${f.severity}`;\n  }\n  if (!Array.isArray(ai.reviewThemes) || !ai.reviewThemes.every((t) => typeof t === \"string\")) return \"reviewThemes is not a list of strings\";\n  if (!Number.isInteger(ai.complaintCount) || ai.complaintCount < 0) return \"complaintCount is not a whole number\";\n  if (typeof ai.firstLine !== \"string\" || !ai.firstLine.trim()) return \"missing firstLine\";\n  if (typeof ai.pitch !== \"string\" || !ai.pitch.trim()) return \"missing pitch\";\n  return null;\n}\n\nfunction parseClaudeResponse(resp) {\n  const usage = {\n    inputTokens: (resp && resp.usage && resp.usage.input_tokens) || 0,\n    outputTokens: (resp && resp.usage && resp.usage.output_tokens) || 0,\n  };\n  const fail = (error) => ({ ai: null, usage, error });\n\n  if (!resp || typeof resp !== \"object\") return fail(\"no response\");\n  if (resp.type === \"error\" || resp.error) return fail(`API error: ${(resp.error && resp.error.message) || \"unknown\"}`);\n  if (resp.stop_reason === \"refusal\") return fail(\"Claude refused this request\");\n  if (resp.stop_reason === \"max_tokens\") return fail(\"reply cut off at max_tokens\");\n\n  const block = (resp.content || []).find((b) => b && b.type === \"text\");\n  if (!block) return fail(\"no text block in reply\");\n\n  let parsed;\n  try {\n    parsed = JSON.parse(block.text);\n  } catch (e) {\n    return fail(\"reply is not valid JSON\");\n  }\n  const shapeError = prompt_shapeError(parsed);\n  if (shapeError) return fail(shapeError);\n\n  const ai = {\n    findings: parsed.findings.map((f) => ({ label: f.label, detail: f.detail, severity: f.severity })),\n    reviewThemes: parsed.reviewThemes,\n    complaintCount: parsed.complaintCount,\n    firstLine: parsed.firstLine,\n    pitch: parsed.pitch,\n    aiSource: resp.model || \"claude\",\n  };\n  return { ai, usage, error: null };\n}\n// Offline stand-in for the Claude step. Returns the same Ai shape, built from rules.\n// A cached Claude reply in lead.mock.ai wins; otherwise findings come from Signals and reviews.\n\nconst mockAi_COMPLAINT = /call back|callback|never showed|no-show|leak(ed)? again|still leak|didn't return|rude|\\blate\\b/i;\nconst mockAi_THEMES = [\n  [/call back|callback|didn't return|never heard back/i, \"slow callbacks\"],\n  [/never showed|no-show/i, \"missed appointments\"],\n  [/leak(ed)? again|still leak/i, \"repeat leaks\"],\n  [/rude/i, \"rude staff\"],\n  [/\\blate\\b/i, \"late crews\"],\n  [/on time|one day|quick|fast/i, \"on-time crews\"],\n  [/clean/i, \"clean job sites\"],\n  [/claim|adjuster|insurance/i, \"help with insurance claims\"],\n  [/honest|fair price|price was fair|saved us/i, \"honest pricing\"],\n];\nconst mockAi_SEVERITY_RANK = { high: 0, medium: 1, low: 2 };\n\nfunction mockAi_hash(text) {\n  let h = 5381;\n  for (const ch of String(text || \"\")) h = ((h * 33) ^ ch.charCodeAt(0)) >>> 0;\n  return h;\n}\n\nfunction mockAi_themes(reviews) {\n  const counts = mockAi_THEMES\n    .map(([pattern, theme]) => [theme, reviews.filter((r) => pattern.test(r.text || \"\")).length])\n    .filter(([, n]) => n > 0);\n  return counts.sort((a, b) => b[1] - a[1]).slice(0, 4).map(([theme]) => theme);\n}\n\n// Each finding carries a `hook` (a clause for the first line) and a `gap` (a noun phrase for the pitch).\nfunction mockAi_findings(lead, s, reviews, complaints) {\n  const out = [];\n  const add = (severity, label, detail, hook, gap) => out.push({ severity, label, detail, hook, gap });\n  const n = reviews.length;\n\n  if (s.hasWebsite === false) {\n    add(\"high\", \"No website\", \"The Google listing has no website, so searchers can't check work or get in touch online.\",\n      \"your Google listing doesn't link to a website\", \"Not having a website\");\n  } else if (s.siteReachable === false) {\n    add(\"high\", \"Website didn't load\", \"The listed website didn't load when we checked it.\",\n      \"your website didn't load when I tried it\", \"A website that doesn't load\");\n  }\n  if (s.onlineBooking === false) {\n    add(\"high\", \"No online booking\", \"The homepage has no way to book an estimate or inspection online.\",\n      \"your site doesn't offer a way to book an estimate online\", \"Missing online booking\");\n  }\n  if (complaints.length >= 2) {\n    const theme = mockAi_themes(complaints)[0] || \"problems\";\n    add(\"high\", \"Repeated review complaints\", `${complaints.length} of the last ${n} reviews complain, mostly about ${theme}.`,\n      `${complaints.length} of your ${n} most recent Google reviews mention ${theme}`, \"A run of negative reviews\");\n  }\n  if (typeof s.pagespeedMobile === \"number\" && s.pagespeedMobile < 50) {\n    add(s.pagespeedMobile < 35 ? \"high\" : \"medium\", \"Slow mobile site\", `PageSpeed mobile ${s.pagespeedMobile}/100.`,\n      `your homepage scores ${s.pagespeedMobile}/100 on Google's mobile speed test`, \"A slow mobile site\");\n  }\n  if (typeof lead.rating === \"number\" && lead.rating < 4) {\n    add(\"medium\", \"Rating below 4 stars\", `Google rating is ${lead.rating}★ from ${lead.reviewCount ?? \"a few\"} reviews.`,\n      `your Google rating sits at ${lead.rating} stars`, \"A rating under 4 stars\");\n  }\n  if (complaints.length === 1) {\n    const theme = mockAi_themes(complaints)[0] || \"a problem\";\n    add(\"medium\", \"Recent review complaint\", `1 of the last ${n} reviews complains about ${theme}.`,\n      `one of your ${n} most recent Google reviews mentions ${theme}`, \"An unanswered review complaint\");\n  }\n  if (s.mobileViewport === false) {\n    add(\"medium\", \"Not mobile friendly\", \"The homepage has no mobile viewport tag, so it renders poorly on phones.\",\n      \"your site isn't set up for phone screens\", \"A site that doesn't fit phone screens\");\n  }\n  if (s.https === false) {\n    add(\"medium\", \"No HTTPS\", \"The website loads over plain HTTP, which browsers flag as not secure.\",\n      \"your website still loads without HTTPS\", \"A site browsers mark as not secure\");\n  }\n  if (s.clickToCall === false) {\n    add(\"low\", \"No tap-to-call\", \"The phone number on the site isn't a tappable link.\",\n      \"your phone number isn't tappable on the site\", \"A phone number visitors can't tap\");\n  }\n  if (typeof s.copyrightYear === \"number\" && s.copyrightYear <= 2023) {\n    add(\"low\", \"Dated website\", `The footer copyright says ${s.copyrightYear}.`,\n      `your site footer still says ${s.copyrightYear}`, \"A site that looks out of date\");\n  }\n  if (Array.isArray(s.socialLinks) && s.socialLinks.length === 0) {\n    add(\"low\", \"No social links\", \"The homepage doesn't link to any social profiles.\",\n      \"your site doesn't link to any social profiles\", \"A site with no social links\");\n  }\n  if (out.length < 2 && typeof lead.rating === \"number\" && lead.rating >= 4) {\n    add(\"low\", \"Strong rating to build on\", `Google rating is ${lead.rating}★ from ${lead.reviewCount ?? \"a few\"} reviews.`,\n      `you have a ${lead.rating}-star Google rating`, \"A strong rating that few searchers see\");\n  }\n  if (out.length < 2 && typeof lead.reviewCount === \"number\" && lead.reviewCount < 20) {\n    add(\"low\", \"Few reviews\", `Only ${lead.reviewCount} Google reviews.`,\n      `you have ${lead.reviewCount} Google reviews so far`, \"A thin review count\");\n  }\n\n  // Stable sort keeps the order above (commercial importance) within each severity.\n  return out\n    .map((f, i) => [f, i])\n    .sort((a, b) => mockAi_SEVERITY_RANK[a[0].severity] - mockAi_SEVERITY_RANK[b[0].severity] || a[1] - b[1])\n    .map(([f]) => f)\n    .slice(0, 4);\n}\n\nfunction mockAi_capitalize(text) {\n  return text.charAt(0).toUpperCase() + text.slice(1);\n}\n\nfunction mockAi_firstLine(lead, top, cfg) {\n  const where = cfg.city ? `roofers in ${cfg.city}` : \"local roofers\";\n  const name = lead.name || \"your business\";\n  const patterns = [\n    (hook) => `Quick note: ${hook}.`,\n    (hook) => `I was looking at ${where} and noticed ${hook}.`,\n    (hook) => `Not sure if anyone has mentioned it, but ${hook}.`,\n    (hook) => `While checking ${name} online, I saw that ${hook}.`,\n  ];\n  return patterns[mockAi_hash(lead.placeId) % patterns.length](top.hook);\n}\n\nfunction mockAi_pitch(top, cfg) {\n  const agency = cfg.agencyName || \"our agency\";\n  const offer = cfg.agencyOffer || \"websites and local marketing\";\n  return `${top.gap} is the kind of gap ${agency} closes with ${offer}. Would you be open to a short call next week to see what that could look like?`;\n}\n\nfunction mockAi(lead, signals, config) {\n  const l = lead || {};\n  if (l.mock && l.mock.ai) return { ...l.mock.ai, aiSource: l.mock.ai.aiSource || \"claude (cached)\" };\n\n  const cfg = config || {};\n  const reviews = Array.isArray(l.reviews) ? l.reviews.slice(0, 5) : [];\n  const complaints = reviews.filter((r) => mockAi_COMPLAINT.test(r.text || \"\"));\n  const found = mockAi_findings(l, signals || {}, reviews, complaints);\n  const top = found[0] || {\n    hook: \"your Google listing has room to bring in more calls\",\n    gap: \"Room to grow on Google\",\n  };\n\n  return {\n    findings: found.map((f) => ({ label: f.label, detail: f.detail, severity: f.severity })),\n    reviewThemes: mockAi_themes(reviews),\n    complaintCount: complaints.length,\n    firstLine: mockAi_firstLine(l, top, cfg),\n    pitch: mockAi_pitch(top, cfg),\n    aiSource: \"template (offline)\",\n  };\n}\n\n// Claude keeps the item order, so reply i belongs to request i. A failed call falls back to the template.\nconst cfg = $('Config').first().json;\nconst sent = $('Build Claude request').all();\nreturn $input.all().map((reply, i) => {\n  const { lead, signals } = sent[i].json;\n  const parsed = parseClaudeResponse(reply.json);\n  const ai = parsed.ai || { ...mockAi(lead, signals, cfg), aiSource: \"template (fallback)\" };\n  return { json: { lead, signals, ai, usage: parsed.usage } };\n});"
+      },
+      "id": "a0260000-0000-4000-8000-000000000000",
+      "name": "Parse Claude",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2480,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Offline stand-in for the Claude step. Returns the same Ai shape, built from rules.\n// A cached Claude reply in lead.mock.ai wins; otherwise findings come from Signals and reviews.\n\nconst mockAi_COMPLAINT = /call back|callback|never showed|no-show|leak(ed)? again|still leak|didn't return|rude|\\blate\\b/i;\nconst mockAi_THEMES = [\n  [/call back|callback|didn't return|never heard back/i, \"slow callbacks\"],\n  [/never showed|no-show/i, \"missed appointments\"],\n  [/leak(ed)? again|still leak/i, \"repeat leaks\"],\n  [/rude/i, \"rude staff\"],\n  [/\\blate\\b/i, \"late crews\"],\n  [/on time|one day|quick|fast/i, \"on-time crews\"],\n  [/clean/i, \"clean job sites\"],\n  [/claim|adjuster|insurance/i, \"help with insurance claims\"],\n  [/honest|fair price|price was fair|saved us/i, \"honest pricing\"],\n];\nconst mockAi_SEVERITY_RANK = { high: 0, medium: 1, low: 2 };\n\nfunction mockAi_hash(text) {\n  let h = 5381;\n  for (const ch of String(text || \"\")) h = ((h * 33) ^ ch.charCodeAt(0)) >>> 0;\n  return h;\n}\n\nfunction mockAi_themes(reviews) {\n  const counts = mockAi_THEMES\n    .map(([pattern, theme]) => [theme, reviews.filter((r) => pattern.test(r.text || \"\")).length])\n    .filter(([, n]) => n > 0);\n  return counts.sort((a, b) => b[1] - a[1]).slice(0, 4).map(([theme]) => theme);\n}\n\n// Each finding carries a `hook` (a clause for the first line) and a `gap` (a noun phrase for the pitch).\nfunction mockAi_findings(lead, s, reviews, complaints) {\n  const out = [];\n  const add = (severity, label, detail, hook, gap) => out.push({ severity, label, detail, hook, gap });\n  const n = reviews.length;\n\n  if (s.hasWebsite === false) {\n    add(\"high\", \"No website\", \"The Google listing has no website, so searchers can't check work or get in touch online.\",\n      \"your Google listing doesn't link to a website\", \"Not having a website\");\n  } else if (s.siteReachable === false) {\n    add(\"high\", \"Website didn't load\", \"The listed website didn't load when we checked it.\",\n      \"your website didn't load when I tried it\", \"A website that doesn't load\");\n  }\n  if (s.onlineBooking === false) {\n    add(\"high\", \"No online booking\", \"The homepage has no way to book an estimate or inspection online.\",\n      \"your site doesn't offer a way to book an estimate online\", \"Missing online booking\");\n  }\n  if (complaints.length >= 2) {\n    const theme = mockAi_themes(complaints)[0] || \"problems\";\n    add(\"high\", \"Repeated review complaints\", `${complaints.length} of the last ${n} reviews complain, mostly about ${theme}.`,\n      `${complaints.length} of your ${n} most recent Google reviews mention ${theme}`, \"A run of negative reviews\");\n  }\n  if (typeof s.pagespeedMobile === \"number\" && s.pagespeedMobile < 50) {\n    add(s.pagespeedMobile < 35 ? \"high\" : \"medium\", \"Slow mobile site\", `PageSpeed mobile ${s.pagespeedMobile}/100.`,\n      `your homepage scores ${s.pagespeedMobile}/100 on Google's mobile speed test`, \"A slow mobile site\");\n  }\n  if (typeof lead.rating === \"number\" && lead.rating < 4) {\n    add(\"medium\", \"Rating below 4 stars\", `Google rating is ${lead.rating}★ from ${lead.reviewCount ?? \"a few\"} reviews.`,\n      `your Google rating sits at ${lead.rating} stars`, \"A rating under 4 stars\");\n  }\n  if (complaints.length === 1) {\n    const theme = mockAi_themes(complaints)[0] || \"a problem\";\n    add(\"medium\", \"Recent review complaint\", `1 of the last ${n} reviews complains about ${theme}.`,\n      `one of your ${n} most recent Google reviews mentions ${theme}`, \"An unanswered review complaint\");\n  }\n  if (s.mobileViewport === false) {\n    add(\"medium\", \"Not mobile friendly\", \"The homepage has no mobile viewport tag, so it renders poorly on phones.\",\n      \"your site isn't set up for phone screens\", \"A site that doesn't fit phone screens\");\n  }\n  if (s.https === false) {\n    add(\"medium\", \"No HTTPS\", \"The website loads over plain HTTP, which browsers flag as not secure.\",\n      \"your website still loads without HTTPS\", \"A site browsers mark as not secure\");\n  }\n  if (s.clickToCall === false) {\n    add(\"low\", \"No tap-to-call\", \"The phone number on the site isn't a tappable link.\",\n      \"your phone number isn't tappable on the site\", \"A phone number visitors can't tap\");\n  }\n  if (typeof s.copyrightYear === \"number\" && s.copyrightYear <= 2023) {\n    add(\"low\", \"Dated website\", `The footer copyright says ${s.copyrightYear}.`,\n      `your site footer still says ${s.copyrightYear}`, \"A site that looks out of date\");\n  }\n  if (Array.isArray(s.socialLinks) && s.socialLinks.length === 0) {\n    add(\"low\", \"No social links\", \"The homepage doesn't link to any social profiles.\",\n      \"your site doesn't link to any social profiles\", \"A site with no social links\");\n  }\n  if (out.length < 2 && typeof lead.rating === \"number\" && lead.rating >= 4) {\n    add(\"low\", \"Strong rating to build on\", `Google rating is ${lead.rating}★ from ${lead.reviewCount ?? \"a few\"} reviews.`,\n      `you have a ${lead.rating}-star Google rating`, \"A strong rating that few searchers see\");\n  }\n  if (out.length < 2 && typeof lead.reviewCount === \"number\" && lead.reviewCount < 20) {\n    add(\"low\", \"Few reviews\", `Only ${lead.reviewCount} Google reviews.`,\n      `you have ${lead.reviewCount} Google reviews so far`, \"A thin review count\");\n  }\n\n  // Stable sort keeps the order above (commercial importance) within each severity.\n  return out\n    .map((f, i) => [f, i])\n    .sort((a, b) => mockAi_SEVERITY_RANK[a[0].severity] - mockAi_SEVERITY_RANK[b[0].severity] || a[1] - b[1])\n    .map(([f]) => f)\n    .slice(0, 4);\n}\n\nfunction mockAi_capitalize(text) {\n  return text.charAt(0).toUpperCase() + text.slice(1);\n}\n\nfunction mockAi_firstLine(lead, top, cfg) {\n  const where = cfg.city ? `roofers in ${cfg.city}` : \"local roofers\";\n  const name = lead.name || \"your business\";\n  const patterns = [\n    (hook) => `Quick note: ${hook}.`,\n    (hook) => `I was looking at ${where} and noticed ${hook}.`,\n    (hook) => `Not sure if anyone has mentioned it, but ${hook}.`,\n    (hook) => `While checking ${name} online, I saw that ${hook}.`,\n  ];\n  return patterns[mockAi_hash(lead.placeId) % patterns.length](top.hook);\n}\n\nfunction mockAi_pitch(top, cfg) {\n  const agency = cfg.agencyName || \"our agency\";\n  const offer = cfg.agencyOffer || \"websites and local marketing\";\n  return `${top.gap} is the kind of gap ${agency} closes with ${offer}. Would you be open to a short call next week to see what that could look like?`;\n}\n\nfunction mockAi(lead, signals, config) {\n  const l = lead || {};\n  if (l.mock && l.mock.ai) return { ...l.mock.ai, aiSource: l.mock.ai.aiSource || \"claude (cached)\" };\n\n  const cfg = config || {};\n  const reviews = Array.isArray(l.reviews) ? l.reviews.slice(0, 5) : [];\n  const complaints = reviews.filter((r) => mockAi_COMPLAINT.test(r.text || \"\"));\n  const found = mockAi_findings(l, signals || {}, reviews, complaints);\n  const top = found[0] || {\n    hook: \"your Google listing has room to bring in more calls\",\n    gap: \"Room to grow on Google\",\n  };\n\n  return {\n    findings: found.map((f) => ({ label: f.label, detail: f.detail, severity: f.severity })),\n    reviewThemes: mockAi_themes(reviews),\n    complaintCount: complaints.length,\n    firstLine: mockAi_firstLine(l, top, cfg),\n    pitch: mockAi_pitch(top, cfg),\n    aiSource: \"template (offline)\",\n  };\n}\n\nconst cfg = $('Config').first().json;\nreturn $input.all().map((i) => ({\n  json: { lead: i.json.lead, signals: i.json.signals, ai: mockAi(i.json.lead, i.json.signals, cfg), usage: { inputTokens: 0, outputTokens: 0 } },\n}));"
+      },
+      "id": "a0270000-0000-4000-8000-000000000000",
+      "name": "Mock AI",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Scores a lead as an OPPORTUNITY for an agency that sells websites, online booking,\n// review management and local ads. Higher = more to sell AND a real business that can pay.\n//\n// Rubric (additive; unknown/null signals add nothing):\n//   Website\n//     No website at all ......................... +40  the whole stack is a fit, biggest gap\n//     No website, so no online booking either ... +15  booking is missing for certain, not just unknown\n//     Website didn't load ....................... +20  broken site = lost calls, easy pitch\n//     No mobile viewport ........................ +15  most local searches are on phones\n//     No online booking ......................... +15  direct upsell\n//     PageSpeed mobile < 30 / < 50 .............. +15 / +10\n//     Copyright 4+ years old .................... +8   site likely unmaintained\n//     No HTTPS .................................. +5   browser \"not secure\" warning\n//     No social links on the site ............... +5\n//   Reputation (review management / ads)\n//     Rating < 4.0 / 4.0-4.3 .................... +10 / +5\n//     2+ / 1 complaints in recent reviews ....... +10 / +5\n//   Ability to pay\n//     25+ / 10-24 reviews ....................... +10 / +5\n//   Disqualified (permanently closed, or under 5 reviews, missing counts as 0):\n//     cold, score capped at 20.\n//\n// Why no-website is 40 + 15 (the brief suggested 35): at 35 a no-website lead topped out\n// in the 50s, below a site with a few small issues, and only 1 of 50 sample leads was hot.\n// No website is the strongest case for this agency, so it now reaches hot with any\n// reputation or size signal.\n//\n// Tiers: hot >= 70, warm 45-69, cold < 45. Reasons are sorted biggest first and, apart from\n// the clamp at 100, add up to the score (the disqualify cap shows as negative points).\n\nconst DISQUALIFIED_CAP = 20;\nconst MIN_REVIEWS = 5;\n\nfunction scoreTier(score) {\n  if (score >= 70) return \"hot\";\n  if (score >= 45) return \"warm\";\n  return \"cold\";\n}\n\nfunction websiteReasons(signals, nowYear) {\n  const reasons = [];\n  const add = (points, reason) => reasons.push({ points, reason });\n  if (signals.hasWebsite === false) {\n    add(40, \"No website at all\");\n    add(15, \"No website, so no online booking either\");\n    return reasons;\n  }\n  if (signals.siteReachable === false) add(20, \"Website didn't load\");\n  if (signals.mobileViewport === false) add(15, \"Website isn't set up for phones\");\n  if (signals.onlineBooking === false) add(15, \"No online booking on the website\");\n  const speed = signals.pagespeedMobile;\n  if (speed != null && speed < 30) add(15, `Very slow on mobile (PageSpeed ${speed})`);\n  else if (speed != null && speed < 50) add(10, `Slow on mobile (PageSpeed ${speed})`);\n  if (signals.copyrightYear != null && nowYear - signals.copyrightYear >= 4) {\n    add(8, `Website looks unmaintained (© ${signals.copyrightYear})`);\n  }\n  if (signals.https === false) add(5, \"Website has no HTTPS\");\n  if (Array.isArray(signals.socialLinks) && signals.socialLinks.length === 0) {\n    add(5, \"Website doesn't link to any social profiles\");\n  }\n  return reasons;\n}\n\nfunction businessReasons(lead, ai) {\n  const reasons = [];\n  const add = (points, reason) => reasons.push({ points, reason });\n  const rating = lead.rating;\n  if (rating != null && rating < 4.0) add(10, `Low Google rating (${rating}★)`);\n  else if (rating != null && rating <= 4.3) add(5, `Google rating has room to grow (${rating}★)`);\n  const complaints = ai && ai.complaintCount;\n  if (complaints >= 2) add(10, `${complaints} complaints in recent reviews`);\n  else if (complaints === 1) add(5, \"1 complaint in recent reviews\");\n  const reviewCount = lead.reviewCount;\n  if (reviewCount >= 25) add(10, `Established business (${reviewCount} reviews)`);\n  else if (reviewCount >= 10) add(5, `Some track record (${reviewCount} reviews)`);\n  return reasons;\n}\n\nfunction disqualifyReason(lead) {\n  const problems = [];\n  if (lead.permanentlyClosed) problems.push(\"permanently closed\");\n  const reviewCount = lead.reviewCount || 0;\n  if (reviewCount < MIN_REVIEWS) problems.push(`only ${reviewCount} reviews`);\n  return problems.length ? `Disqualified: ${problems.join(\", \")}` : null;\n}\n\nfunction scoreLead(lead, signals, ai, nowYear = new Date().getFullYear()) {\n  const scoreReasons = [...websiteReasons(signals, nowYear), ...businessReasons(lead, ai)];\n  let total = scoreReasons.reduce((sum, r) => sum + r.points, 0);\n  const disqualified = disqualifyReason(lead);\n  if (disqualified) {\n    const cut = Math.min(0, DISQUALIFIED_CAP - total);\n    scoreReasons.push({ points: cut, reason: `${disqualified} (score capped at ${DISQUALIFIED_CAP})` });\n    total += cut;\n  }\n  scoreReasons.sort((a, b) => b.points - a.points);\n  const score = Math.round(Math.min(100, Math.max(0, total)));\n  return { score, tier: disqualified ? \"cold\" : scoreTier(score), scoreReasons };\n}\n\nconst year = new Date().getFullYear();\nreturn $input.all().map((i) => {\n  const { lead, signals, ai, usage } = i.json;\n  const { score, tier, scoreReasons } = scoreLead(lead, signals, ai, year);\n  return { json: { ...lead, signals, ...ai, usage, score, tier, scoreReasons } };\n});"
+      },
+      "id": "a0280000-0000-4000-8000-000000000000",
+      "name": "Score",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Ranks the scored leads and builds the two export files: leads.json and leads.csv.\n// Each row is a merged lead: Lead fields + signals + Ai fields + score fields (+ optional usage).\n\n// USD per million tokens, from platform.claude.com pricing, Oct 2026.\nconst PRICES = {\n  \"claude-haiku-5-5\": { in: 0.10, out: 0.50 },\n  \"claude-sonnet-5-5\": { in: 2, out: 10 },\n};\n\nconst CSV_HEADER = [\"rank\", \"tier\", \"score\", \"name\", \"phone\", \"website\", \"rating\", \"review_count\", \"top_findings\", \"first_line\", \"pitch\", \"maps_url\"];\n\nfunction csvCell(value) {\n  if (value == null) return \"\";\n  const text = String(value);\n  return /[\",\\n\\r]/.test(text) ? `\"${text.replace(/\"/g, '\"\"')}\"` : text;\n}\n\nfunction toJsonLead(row, rank) {\n  return {\n    rank,\n    placeId: row.placeId,\n    name: row.name,\n    address: row.address,\n    phone: row.phone,\n    website: row.website,\n    mapsUrl: row.mapsUrl,\n    rating: row.rating,\n    reviewCount: row.reviewCount,\n    socials: row.socials,\n    email: row.email,\n    signals: row.signals,\n    findings: row.findings,\n    reviewThemes: row.reviewThemes,\n    complaintCount: row.complaintCount,\n    score: row.score,\n    tier: row.tier,\n    scoreReasons: row.scoreReasons,\n    firstLine: row.firstLine,\n    pitch: row.pitch,\n    aiSource: row.aiSource,\n  };\n}\n\nfunction toCsvLine(lead) {\n  const topFindings = (lead.findings || []).map((f) => f.label).join(\"; \");\n  return [\n    lead.rank, lead.tier, lead.score, lead.name, lead.phone, lead.website, lead.rating,\n    lead.reviewCount, topFindings, lead.firstLine, lead.pitch, lead.mapsUrl,\n  ].map(csvCell).join(\",\");\n}\n\nfunction buildOutput(rows, meta) {\n  const sorted = [...rows].sort((a, b) => b.score - a.score || (b.reviewCount || 0) - (a.reviewCount || 0));\n  const leads = sorted.map((row, i) => toJsonLead(row, i + 1));\n\n  const tierCounts = { hot: 0, warm: 0, cold: 0 };\n  let inputTokens = 0;\n  let outputTokens = 0;\n  for (const row of rows) {\n    tierCounts[row.tier] += 1;\n    inputTokens += (row.usage && row.usage.inputTokens) || 0;\n    outputTokens += (row.usage && row.usage.outputTokens) || 0;\n  }\n\n  const useClaude = meta.ai === \"claude\";\n  const price = (useClaude && PRICES[meta.model]) || { in: 0, out: 0 };\n  const cost = (inputTokens * price.in + outputTokens * price.out) / 1e6;\n\n  const json = {\n    meta: {\n      agency: meta.agency,\n      niche: meta.niche,\n      city: meta.city,\n      dataSource: meta.dataSource,\n      ai: meta.ai,\n      model: useClaude ? meta.model : null,\n      generatedAt: meta.generatedAt,\n      durationSeconds: Math.round(meta.durationSeconds * 10) / 10,\n      leadCount: leads.length,\n      tierCounts,\n      claudeInputTokens: inputTokens,\n      claudeOutputTokens: outputTokens,\n      claudeCostUsd: Number(cost.toFixed(4)),\n      demoBuild: true,\n    },\n    leads,\n  };\n  const csv = [CSV_HEADER.join(\",\"), ...leads.map(toCsvLine)].join(\"\\n\") + \"\\n\";\n  return { json, csv };\n}\n\nconst cfg = $('Config').first().json;\nconst { json, csv } = buildOutput($input.all().map((i) => i.json), {\n  agency: cfg.agencyName,\n  niche: cfg.searchTerm,\n  city: cfg.city,\n  dataSource: cfg.dataSource,\n  ai: cfg.ai,\n  model: cfg.model,\n  generatedAt: new Date().toISOString(),\n  durationSeconds: (Date.now() - new Date(cfg.startedAt).getTime()) / 1000,\n});\nreturn [{ json: { jsonText: JSON.stringify(json, null, 2) + \"\\n\", csv } }];"
+      },
+      "id": "a0290000-0000-4000-8000-000000000000",
+      "name": "Build output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2940,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "jsonText",
+        "options": {
+          "fileName": "leads.json"
+        }
+      },
+      "id": "a0300000-0000-4000-8000-000000000000",
+      "name": "Make leads.json",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3160,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "__REPO__/output/leads.json",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a0310000-0000-4000-8000-000000000000",
+      "name": "Write leads.json",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        3380,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "csv",
+        "options": {
+          "fileName": "leads.csv"
+        }
+      },
+      "id": "a0320000-0000-4000-8000-000000000000",
+      "name": "Make leads.csv",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3160,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "__REPO__/output/leads.csv",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a0330000-0000-4000-8000-000000000000",
+      "name": "Write leads.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        3380,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 1 Find roofers\nPulls Google Maps listings for the search term and city. In **mock** mode this reads a saved sample of 50 Dallas roofers, so the demo runs offline. In **apify** mode it calls the Apify Google Maps scraper.",
+        "width": 700,
+        "height": 220,
+        "color": 4
+      },
+      "id": "a0340000-0000-4000-8000-000000000000",
+      "name": "Note 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        640,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2 Audit website + speed\nFetches each homepage and checks it: loads? mobile-friendly? online booking? click-to-call? Then asks Google PageSpeed for the mobile speed score.",
+        "width": 700,
+        "height": 220,
+        "color": 5
+      },
+      "id": "a0350000-0000-4000-8000-000000000000",
+      "name": "Note 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1090,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3 Claude audit + opener\nClaude reads the facts and recent reviews, then writes the findings, a one-line cold-email opener and a short pitch. Mock mode uses a template instead.",
+        "width": 700,
+        "height": 220,
+        "color": 6
+      },
+      "id": "a0360000-0000-4000-8000-000000000000",
+      "name": "Note 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 4 Score, rank, export\nEach lead gets a 0-100 opportunity score (hot / warm / cold), the list is ranked, and leads.json and leads.csv are written to the output folder.",
+        "width": 700,
+        "height": 220,
+        "color": 7
+      },
+      "id": "a0370000-0000-4000-8000-000000000000",
+      "name": "Note 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2680,
+        560
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Data source?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data source?": {
+      "main": [
+        [
+          {
+            "node": "Read sample file",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Apify: Google Maps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read sample file": {
+      "main": [
+        [
+          {
+            "node": "Extract JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract JSON": {
+      "main": [
+        [
+          {
+            "node": "Normalize + audit (mock)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apify: Google Maps": {
+      "main": [
+        [
+          {
+            "node": "Normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize": {
+      "main": [
+        [
+          {
+            "node": "Fetch homepage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch homepage": {
+      "main": [
+        [
+          {
+            "node": "PageSpeed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PageSpeed": {
+      "main": [
+        [
+          {
+            "node": "Audit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize + audit (mock)": {
+      "main": [
+        [
+          {
+            "node": "AI?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audit": {
+      "main": [
+        [
+          {
+            "node": "AI?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI?": {
+      "main": [
+        [
+          {
+            "node": "Build Claude request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mock AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Claude request": {
+      "main": [
+        [
+          {
+            "node": "Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude": {
+      "main": [
+        [
+          {
+            "node": "Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock AI": {
+      "main": [
+        [
+          {
+            "node": "Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score": {
+      "main": [
+        [
+          {
+            "node": "Build output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build output": {
+      "main": [
+        [
+          {
+            "node": "Make leads.json",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Make leads.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make leads.json": {
+      "main": [
+        [
+          {
+            "node": "Write leads.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make leads.csv": {
+      "main": [
+        [
+          {
+            "node": "Write leads.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
