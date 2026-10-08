@@ -4,7 +4,7 @@ Finds local roofers on Google Maps, audits each one's website and reviews, score
 
 > **Demo build / concept project.** Built for my portfolio around a fictional agency, "Apex Growth Agency". It is not client work, and the public dashboard uses fictional mock data. Nothing is sent automatically.
 
-**Live dashboard (fictional data):** https://moezkayy.github.io/apex-roofing-ai-leadgen/
+**Dashboard (fictional data):** run `npm run dashboard`, then open http://localhost:8000/docs/
 
 ![Dashboard list](media/dashboard-list.png)
 
@@ -81,7 +81,7 @@ npm run n8n
 npm run dashboard
 ```
 
-The dashboard reads `docs/leads.json`, which is fictional mock data. The public repo ships `n8n/lead-gen-workflow.public.json`, which has a `__REPO__` placeholder instead of a file path. `npm run build` replaces the placeholder with your local path and writes `n8n/lead-gen-workflow.json` (git-ignored).
+Open http://localhost:8000/docs/ . The dashboard reads `docs/leads.json`, which is fictional mock data. The public repo ships `n8n/lead-gen-workflow.public.json`, which has a `__REPO__` placeholder instead of a file path. `npm run build` replaces the placeholder with your local path and writes `n8n/lead-gen-workflow.json` (git-ignored).
 
 ## Real mode
 
@@ -119,7 +119,7 @@ n8n/        workflow.src.json (source) and lead-gen-workflow.public.json (build 
 scripts/    build_workflow.mjs, n8n.sh, helper scripts
 tests/      node:test unit tests
 data/       sample_roofers.json (fictional sample listings)
-docs/       static dashboard + fictional leads.json (GitHub Pages)
+docs/       static dashboard + fictional leads.json
 media/      screenshots, test-run metrics, prompt notes, demo script
 ```
 
