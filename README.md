@@ -4,7 +4,7 @@ Finds local roofers on Google Maps, audits each one's website and reviews, score
 
 > **Demo build / concept project.** Built for my portfolio around a fictional agency, "Apex Growth Agency". It is not client work, and the public dashboard uses fictional mock data. Nothing is sent automatically.
 
-**Live dashboard (fictional data):** https://moezkayy.github.io/ai-lead-gen/
+**Live dashboard (fictional data):** https://moezkayy.github.io/apex-roofing-ai-leadgen/
 
 ![Dashboard list](media/dashboard-list.png)
 

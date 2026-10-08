@@ -1,1 +1,1 @@
-{"name":"ai-lead-gen","version":"0.1.0","private":true,"type":"commonjs","engines":{"node":">=24"},"scripts":{"test":"node --test 'tests/*.test.js'","build":"node scripts/build_workflow.mjs","n8n":"bash scripts/n8n.sh","dashboard":"python3 -m http.server 8000"}}
+{"name":"apex-roofing-ai-leadgen","version":"0.1.0","private":true,"type":"commonjs","engines":{"node":">=24"},"scripts":{"test":"node --test 'tests/*.test.js'","build":"node scripts/build_workflow.mjs","n8n":"bash scripts/n8n.sh","dashboard":"python3 -m http.server 8000"}}
